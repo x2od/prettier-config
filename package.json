@@ -7,7 +7,8 @@
 		"prettier": "prettier --write .",
 		"prettier:verify": "prettier --list-different .",
 		"minor": "npm version minor",
-		"patch": "npm version patch"
+		"patch": "npm version patch",
+		"prepare": "husky"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@x2od/prettier-config": "^0.0.1",
+		"husky": "^9.0.11",
 		"prettier": "^3.2.5"
 	}
 }
