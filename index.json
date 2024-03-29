@@ -29,7 +29,7 @@
 			}
 		},
 		{
-			"files": "*.apex,soql",
+			"files": "*.{apex,soql}",
 			"options": { "parser": "anonymous-apex" }
 		},
 		{
