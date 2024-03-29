@@ -1,6 +1,6 @@
 {
 	"name": "@x2od/prettier-config",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "X-Squared base Prettier configuration",
 	"scripts": {
 		"prettier": "prettier --write .",
