@@ -57,6 +57,10 @@
 			}
 		}
 	],
-	"plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
+	"plugins": [
+		"prettier-plugin-apex",
+		"@prettier/plugin-xml",
+		"prettier-plugin-organize-attributes"
+	],
 	"$schema": "https://json.schemastore.org/prettierrc"
 }

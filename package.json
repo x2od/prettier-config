@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "X-Squared base Prettier configuration",
 	"scripts": {
+		"generateConfig": "printf 'module.exports = ' > index.js && cat index.json >>index.js && printf ';' >> index.js && npx prettier --write index.js",
 		"prettier": "prettier --write .",
 		"prettier:verify": "prettier --list-different .",
 		"minor": "npm version minor",
