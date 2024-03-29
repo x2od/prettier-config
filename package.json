@@ -3,12 +3,10 @@
 	"version": "0.0.1",
 	"description": "X-Squared base Prettier configuration",
 	"scripts": {
-		"generateConfig": "printf 'module.exports = ' > index.js && cat index.json >>index.js && printf ';' >> index.js && npx prettier --write index.js",
 		"prettier": "prettier --write .",
 		"prettier:verify": "prettier --list-different .",
 		"minor": "npm version minor",
-		"patch": "npm version patch",
-		"prepare": "husky"
+		"patch": "npm version patch"
 	},
 	"repository": {
 		"type": "git",
@@ -18,9 +16,9 @@
 		"prettier"
 	],
 	"files": [
-		"index.js"
+		"index.jons"
 	],
-	"main": "index.js",
+	"main": "index.json",
 	"author": {
 		"name": "David Schach",
 		"url": "https://github.com/dschach"
@@ -35,7 +33,6 @@
 	},
 	"devDependencies": {
 		"@x2od/prettier-config": "^0.0.1",
-		"husky": "^9.0.11",
 		"prettier": "^3.2.5"
 	}
 }
