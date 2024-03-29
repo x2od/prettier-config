@@ -16,7 +16,7 @@
 		"prettier"
 	],
 	"files": [
-		"index.jons"
+		"index.json"
 	],
 	"main": "index.json",
 	"author": {
