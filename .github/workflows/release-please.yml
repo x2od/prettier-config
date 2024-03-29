@@ -3,8 +3,9 @@ on:
   push:
     branches:
       - main
-      #aths:
+    paths:
       - 'index.json'
+      - 'package.json'
   workflow_dispatch:
 
 permissions:

@@ -19,29 +19,22 @@
 		{
 			"files": "*.{cmp,page,component}",
 			"options": {
-				"parser": "html",
-				"tabWidth": 2,
-				"useTabs": true,
-				"printWidth": 180
+				"parser": "html"
 			}
 		},
 		{
 			"files": "*.{cls,trigger}",
 			"options": {
-				"parser": "apex",
-				"apexInsertFinalNewline": false,
-				"tabWidth": 2,
-				"useTabs": true,
-				"experimentalTernaries": true
+				"parser": "apex"
 			}
 		},
 		{
-			"files": "*.apex,soql",
+			"files": "*.{apex,soql}",
 			"options": { "parser": "anonymous-apex" }
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "tabWidth": 2, "useTabs": false }
+			"options": { "useTabs": false }
 		},
 		{
 			"files": ".prettierrc",
@@ -51,7 +44,6 @@
 			"files": "**/pmd/*.xml",
 			"options": {
 				"parser": "xml",
-				"useTabs": true,
 				"xmlWhitespaceSensitivity": "preserve"
 			}
 		},
@@ -59,14 +51,16 @@
 			"files": "doc*/**/*.html",
 			"options": {
 				"parser": "html",
-				"useTabs": true,
-				"tabWidth": 2,
 				"printWidth": 150,
 				"htmlWhitespaceSensitivity": "ignore",
 				"singleQuote": false
 			}
 		}
 	],
-	"plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
+	"plugins": [
+		"prettier-plugin-apex",
+		"@prettier/plugin-xml",
+		"prettier-plugin-organize-attributes"
+	],
 	"$schema": "https://json.schemastore.org/prettierrc"
 }

@@ -2,8 +2,12 @@
 	"name": "@x2od/prettier-config",
 	"version": "0.0.1",
 	"description": "X-Squared base Prettier configuration",
-	"main": "index.json",
-	"scripts": {},
+	"scripts": {
+		"prettier": "prettier --write .",
+		"prettier:verify": "prettier --list-different .",
+		"minor": "npm version minor",
+		"patch": "npm version patch"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/x2od/prettier-config.git"
@@ -11,11 +15,24 @@
 	"keywords": [
 		"prettier"
 	],
+	"files": [
+		"index.json"
+	],
+	"main": "index.json",
 	"author": {
 		"name": "David Schach",
 		"url": "https://github.com/dschach"
 	},
 	"license": "MIT",
 	"bugs": "https://github.com/x2od/prettier-config/issues",
-	"homepage": "https://github.com/x2od/prettier-config#readme"
+	"homepage": "https://github.com/x2od/prettier-config#readme",
+	"dependencies": {
+		"@prettier/plugin-xml": "^3.3.1",
+		"prettier-plugin-apex": "^2.1.0",
+		"prettier-plugin-organize-attributes": "^1.0.0"
+	},
+	"devDependencies": {
+		"@x2od/prettier-config": "^0.0.1",
+		"prettier": "^3.2.5"
+	}
 }
