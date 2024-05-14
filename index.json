@@ -13,19 +13,23 @@
 	"xmlSelfClosingSpace": true,
 	"overrides": [
 		{
+			"files": "*.{cmp,page,component}",
+			"options": {
+				"parser": "html",
+				"attributeGroups": ["$DEFAULT", "^html-", "aria-"],
+				"attributeIgnoreCase": true
+			}
+		},
+		{
 			"files": "**/lwc/**/*.html",
 			"options": { "parser": "lwc", "printWidth": 80 }
 		},
 		{
-			"files": "*.{cmp,page,component}",
-			"options": {
-				"parser": "html"
-			}
-		},
-		{
 			"files": "*.{cls,trigger}",
 			"options": {
-				"parser": "apex"
+				"parser": "apex",
+				"tabWidth": 2,
+				"useTabs": true
 			}
 		},
 		{
@@ -33,18 +37,27 @@
 			"options": { "parser": "anonymous-apex" }
 		},
 		{
+			"files": "*meta.xml",
+			"options": {
+				"parser": "xml",
+				"xmlSelfClosingSpace": false,
+				"bracketSameLine": true
+			}
+		},
+		{
 			"files": "*.{yml,yaml}",
 			"options": { "useTabs": false }
 		},
 		{
-			"files": ".prettierrc",
+			"files": "*.{prettierrc,json}",
 			"options": { "parser": "json", "printWidth": 80 }
 		},
 		{
 			"files": "**/pmd/*.xml",
 			"options": {
 				"parser": "xml",
-				"xmlWhitespaceSensitivity": "preserve"
+				"xmlWhitespaceSensitivity": "preserve",
+				"xmlSelfClosingSpace": true
 			}
 		},
 		{

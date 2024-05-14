@@ -26,13 +26,24 @@
 	"license": "MIT",
 	"bugs": "https://github.com/x2od/prettier-config/issues",
 	"homepage": "https://github.com/x2od/prettier-config#readme",
-	"dependencies": {
-		"@prettier/plugin-xml": "^3.3.1",
-		"prettier-plugin-apex": "^2.1.0",
-		"prettier-plugin-organize-attributes": "^1.0.0"
+	"peerDependencies": {
+		"@prettier/plugin-xml": "^3.x",
+		"prettier-plugin-apex": "^2.x",
+		"prettier-plugin-organize-attributes": "^1.x",
+		"prettier": "^3.x"
+	},
+	"peerDependenciesMeta": {
+		"@prettier/plugin-xml": {
+			"optional": true
+		},
+		"prettier-plugin-apex": {
+			"optional": true
+		},
+		"prettier-plugin-organize-attributes": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
-		"@x2od/prettier-config": "^0.0.1",
-		"prettier": "^3.2.5"
+		"@x2od/prettier-config": "^0.0.2"
 	}
 }
