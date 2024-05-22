@@ -34,7 +34,7 @@
 		},
 		{
 			"files": "*.{apex,soql}",
-			"options": { "parser": "anonymous-apex" }
+			"options": { "parser": "apex-anonymous" }
 		},
 		{
 			"files": "*meta.xml",
