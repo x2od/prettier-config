@@ -13,17 +13,19 @@
 	"xmlSelfClosingSpace": true,
 	"overrides": [
 		{
+			"files": "**/lwc/**/*.html",
+			"options": { "parser": "lwc", "printWidth": 80 }
+		},
+		{
 			"files": "*.{cmp,page,component}",
 			"options": {
 				"parser": "html",
 				"attributeGroups": ["$DEFAULT", "^html-", "aria-"],
-				"attributeIgnoreCase": true
+				"attributeIgnoreCase": true,
+				"useTabs": true
 			}
 		},
-		{
-			"files": "**/lwc/**/*.html",
-			"options": { "parser": "lwc", "printWidth": 80 }
-		},
+
 		{
 			"files": "*.{cls,trigger}",
 			"options": {
@@ -33,15 +35,20 @@
 			}
 		},
 		{
+			"files": "*.trigger",
+			"options": { "printWidth": 200 }
+		},
+		{
 			"files": "*.{apex,soql}",
 			"options": { "parser": "apex-anonymous" }
 		},
 		{
 			"files": "*meta.xml",
 			"options": {
+				"bracketSameLine": true,
 				"parser": "xml",
-				"xmlSelfClosingSpace": false,
-				"bracketSameLine": true
+				"useTabs": false,
+				"xmlSelfClosingSpace": false
 			}
 		},
 		{
@@ -49,14 +56,22 @@
 			"options": { "useTabs": false }
 		},
 		{
-			"files": "*.{prettierrc,json}",
-			"options": { "parser": "json", "printWidth": 80 }
+			"files": ".prettier*",
+			"options": { "parser": "json", "printWidth": 80, "useTabs": true }
 		},
 		{
-			"files": "**/pmd/*.xml",
+			"files": "*.json",
+			"options": {
+				"parser": "json-stringify",
+				"useTabs": true,
+				"tabWidth": 2
+			}
+		},
+		{
+			"files": "{**/pmd/*.xml, ruleset.xml}",
 			"options": {
 				"parser": "xml",
-				"xmlWhitespaceSensitivity": "preserve",
+				"useTabs": true,
 				"xmlSelfClosingSpace": true
 			}
 		},
