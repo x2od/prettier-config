@@ -20,9 +20,15 @@
 			"files": "*.{cmp,page,component}",
 			"options": {
 				"parser": "html",
-				"attributeGroups": ["$DEFAULT", "^html-", "aria-"],
+				"attributeGroups": [
+					"$DEFAULT",
+					"^(id|name)$",
+					"^html-",
+					"^class$",
+					"aria-"
+				],
 				"attributeIgnoreCase": true,
-				"useTabs": true
+				"singleQuote": false
 			}
 		},
 
@@ -36,7 +42,12 @@
 		},
 		{
 			"files": "*.trigger",
-			"options": { "printWidth": 200 }
+			"options": {
+				"parser": "apex",
+				"tabWidth": 2,
+				"useTabs": true,
+				"printWidth": 200
+			}
 		},
 		{
 			"files": "*.{apex,soql}",
@@ -53,7 +64,7 @@
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "useTabs": false }
+			"options": { "parser": "yaml", "useTabs": false, "singleQuote": false }
 		},
 		{
 			"files": ".prettier*",
@@ -72,6 +83,7 @@
 			"options": {
 				"parser": "xml",
 				"useTabs": true,
+				"xmlWhitespaceSensitivity": "preserve",
 				"xmlSelfClosingSpace": true
 			}
 		},
