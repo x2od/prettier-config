@@ -1,0 +1,27 @@
+{
+	"recommendations": [
+		// Markdown
+		"yzhang.markdown-all-in-one",
+		// Git
+		"github.vscode-pull-request-github",
+		"michelemelluso.gitignore",
+		// Inline helpers
+		"usernamehw.errorlens",
+		// Linter
+		"dbaeumer.vscode-eslint",
+		// Formatting
+		"esbenp.prettier-vscode",
+		// Alignment
+		"aaron-bond.better-comments",
+		"cpmcgrath.codealignment-vscode",
+		"sirtori.indenticator",
+		"chouzz.vscode-better-align",
+		"oderwat.indent-rainbow",
+		// Scripts
+		"ionutvmi.path-autocomplete",
+		// npm
+		"matteopieroni.refresh-npm-packages",
+		// Themes
+		"pkief.material-icon-theme"
+	]
+}

@@ -16,7 +16,13 @@
 			"files": "*.{cmp,page,component}",
 			"options": {
 				"parser": "html",
-				"attributeGroups": ["$DEFAULT", "^html-", "aria-"],
+				"attributeGroups": [
+					"$DEFAULT",
+					"^(id|name)$",
+					"^html-",
+					"^class$",
+					"aria-"
+				],
 				"attributeIgnoreCase": true
 			}
 		},
@@ -46,7 +52,7 @@
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "useTabs": false }
+			"options": { "useTabs": false, "singleQuote": false }
 		},
 		{
 			"files": "*.{prettierrc,json}",
