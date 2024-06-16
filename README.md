@@ -90,6 +90,8 @@ To extend a configuration you will need to:
 >
 > _source: <https://github.com/prettier/prettier/blob/main/docs/configuration.md>_
 
+NOTE: THIS DOES NOT WORK! You will get an error that you cannot use import outside of a module. Please use the below instead.
+
 For example, if you need to change it so that semicolons are required:
 
 ```javascript
