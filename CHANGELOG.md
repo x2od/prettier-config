@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.0.3](https://github.com/x2od/prettier-config/compare/v0.0.2...v0.0.3) (2024-06-16)
+
+
+### Features
+
+* Sort base config ([#7](https://github.com/x2od/prettier-config/issues/7)) ([48a9781](https://github.com/x2od/prettier-config/commit/48a97817b90fe2738c051ba8aa0a8c3d0f141ea1))
+* Update dependencies and some config ([6f8a2a0](https://github.com/x2od/prettier-config/commit/6f8a2a039da8abf15dab7895d65346a9282e5351))
+
+
+### Bug Fixes
+
+* Apex-anonymous parser ([d5f21fa](https://github.com/x2od/prettier-config/commit/d5f21fa107242b3b64eedc8f7c811976f2d6c962))
+
+
+### Build System
+
+* **prettier:** Update yaml, visualforce ([#6](https://github.com/x2od/prettier-config/issues/6)) ([5c1ad19](https://github.com/x2od/prettier-config/commit/5c1ad190498429f674eebec6eadae7efd59022f4))
+
 ## [0.0.2](https://github.com/x2od/prettier-config/compare/v0.0.1...v0.0.2) (2024-03-29)
 
 
