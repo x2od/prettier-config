@@ -23,8 +23,9 @@
 			"files": "*.{cmp,page,component}",
 			"options": {
 				"attributeGroups": [
+					"^id$",
+					"^name$",
 					"$DEFAULT",
-					"^(id|name)$",
 					"^html-",
 					"^class$",
 					"aria-"
@@ -105,7 +106,15 @@
 				"htmlWhitespaceSensitivity": "ignore",
 				"parser": "html",
 				"printWidth": 150,
-				"singleQuote": false
+				"singleQuote": false,
+				"attributeGroups": [
+					"^id$",
+					"^name$",
+					"$DEFAULT",
+					"^html-",
+					"^class$",
+					"aria-"
+				]
 			}
 		}
 	],
