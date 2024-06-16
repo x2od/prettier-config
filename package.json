@@ -20,30 +20,30 @@
 	],
 	"main": "index.json",
 	"author": {
-		"name": "David Schach",
-		"url": "https://github.com/dschach"
+		"name": "David Schach (X-Squared on Demand)",
+		"url": "https://github.com/x2od"
 	},
 	"license": "MIT",
 	"bugs": "https://github.com/x2od/prettier-config/issues",
 	"homepage": "https://github.com/x2od/prettier-config#readme",
-	"peerDependencies": {
+	"dependencies": {
 		"@prettier/plugin-xml": "^3.x",
 		"prettier-plugin-apex": "^2.x",
-		"prettier-plugin-organize-attributes": "^1.x",
-		"prettier": "^3.x"
+		"prettier-plugin-organize-attributes": "^1.x"
 	},
 	"peerDependenciesMeta": {
 		"@prettier/plugin-xml": {
-			"optional": true
+			"optional": false
 		},
 		"prettier-plugin-apex": {
-			"optional": true
+			"optional": false
 		},
 		"prettier-plugin-organize-attributes": {
-			"optional": true
+			"optional": false
 		}
 	},
 	"devDependencies": {
-		"@x2od/prettier-config": "^0.0.2"
+		"@x2od/prettier-config": "latest",
+		"prettier": "^3.x"
 	}
 }

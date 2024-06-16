@@ -13,9 +13,15 @@
 	"xmlSelfClosingSpace": true,
 	"overrides": [
 		{
+			"files": "**/lwc/**/*.html",
+			"options": {
+				"parser": "lwc",
+				"printWidth": 80
+			}
+		},
+		{
 			"files": "*.{cmp,page,component}",
 			"options": {
-				"parser": "html",
 				"attributeGroups": [
 					"$DEFAULT",
 					"^(id|name)$",
@@ -23,12 +29,10 @@
 					"^class$",
 					"aria-"
 				],
-				"attributeIgnoreCase": true
+				"attributeIgnoreCase": true,
+				"parser": "html",
+				"singleQuote": false
 			}
-		},
-		{
-			"files": "**/lwc/**/*.html",
-			"options": { "parser": "lwc", "printWidth": 80 }
 		},
 		{
 			"files": "*.{cls,trigger}",
@@ -39,39 +43,68 @@
 			}
 		},
 		{
+			"files": "*.trigger",
+			"options": {
+				"parser": "apex",
+				"printWidth": 200,
+				"tabWidth": 2,
+				"useTabs": true
+			}
+		},
+		{
 			"files": "*.{apex,soql}",
-			"options": { "parser": "apex-anonymous" }
+			"options": {
+				"parser": "apex-anonymous"
+			}
 		},
 		{
 			"files": "*meta.xml",
 			"options": {
+				"bracketSameLine": true,
 				"parser": "xml",
-				"xmlSelfClosingSpace": false,
-				"bracketSameLine": true
+				"useTabs": false,
+				"xmlSelfClosingSpace": false
 			}
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "useTabs": false, "singleQuote": false }
+			"options": {
+				"parser": "yaml",
+				"singleQuote": false,
+				"useTabs": false
+			}
 		},
 		{
-			"files": "*.{prettierrc,json}",
-			"options": { "parser": "json", "printWidth": 80 }
+			"files": ".prettier*",
+			"options": {
+				"parser": "json",
+				"printWidth": 80,
+				"useTabs": true
+			}
 		},
 		{
-			"files": "**/pmd/*.xml",
+			"files": "*.json",
+			"options": {
+				"parser": "json-stringify",
+				"tabWidth": 2,
+				"useTabs": true
+			}
+		},
+		{
+			"files": "{**/pmd/*.xml, ruleset.xml}",
 			"options": {
 				"parser": "xml",
-				"xmlWhitespaceSensitivity": "preserve",
-				"xmlSelfClosingSpace": true
+				"useTabs": true,
+				"xmlSelfClosingSpace": true,
+				"xmlWhitespaceSensitivity": "preserve"
 			}
 		},
 		{
 			"files": "doc*/**/*.html",
 			"options": {
+				"htmlWhitespaceSensitivity": "ignore",
 				"parser": "html",
 				"printWidth": 150,
-				"htmlWhitespaceSensitivity": "ignore",
 				"singleQuote": false
 			}
 		}
