@@ -14,12 +14,14 @@
 	"overrides": [
 		{
 			"files": "**/lwc/**/*.html",
-			"options": { "parser": "lwc", "printWidth": 80 }
+			"options": {
+				"parser": "lwc",
+				"printWidth": 80
+			}
 		},
 		{
 			"files": "*.{cmp,page,component}",
 			"options": {
-				"parser": "html",
 				"attributeGroups": [
 					"$DEFAULT",
 					"^(id|name)$",
@@ -28,10 +30,10 @@
 					"aria-"
 				],
 				"attributeIgnoreCase": true,
+				"parser": "html",
 				"singleQuote": false
 			}
 		},
-
 		{
 			"files": "*.{cls,trigger}",
 			"options": {
@@ -44,14 +46,16 @@
 			"files": "*.trigger",
 			"options": {
 				"parser": "apex",
+				"printWidth": 200,
 				"tabWidth": 2,
-				"useTabs": true,
-				"printWidth": 200
+				"useTabs": true
 			}
 		},
 		{
 			"files": "*.{apex,soql}",
-			"options": { "parser": "apex-anonymous" }
+			"options": {
+				"parser": "apex-anonymous"
+			}
 		},
 		{
 			"files": "*meta.xml",
@@ -64,18 +68,26 @@
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "parser": "yaml", "useTabs": false, "singleQuote": false }
+			"options": {
+				"parser": "yaml",
+				"singleQuote": false,
+				"useTabs": false
+			}
 		},
 		{
 			"files": ".prettier*",
-			"options": { "parser": "json", "printWidth": 80, "useTabs": true }
+			"options": {
+				"parser": "json",
+				"printWidth": 80,
+				"useTabs": true
+			}
 		},
 		{
 			"files": "*.json",
 			"options": {
 				"parser": "json-stringify",
-				"useTabs": true,
-				"tabWidth": 2
+				"tabWidth": 2,
+				"useTabs": true
 			}
 		},
 		{
@@ -83,16 +95,16 @@
 			"options": {
 				"parser": "xml",
 				"useTabs": true,
-				"xmlWhitespaceSensitivity": "preserve",
-				"xmlSelfClosingSpace": true
+				"xmlSelfClosingSpace": true,
+				"xmlWhitespaceSensitivity": "preserve"
 			}
 		},
 		{
 			"files": "doc*/**/*.html",
 			"options": {
+				"htmlWhitespaceSensitivity": "ignore",
 				"parser": "html",
 				"printWidth": 150,
-				"htmlWhitespaceSensitivity": "ignore",
 				"singleQuote": false
 			}
 		}
