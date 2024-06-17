@@ -13,7 +13,8 @@
 		"url": "git+ssh://git@github.com/x2od/prettier-config.git"
 	},
 	"keywords": [
-		"prettier"
+		"prettier",
+		"x2od"
 	],
 	"files": [
 		"index.json"
@@ -43,7 +44,7 @@
 		}
 	},
 	"devDependencies": {
-		"@x2od/prettier-config": "latest",
-		"prettier": "^3.x"
+		"@x2od/prettier-config": "^0.0.3",
+		"prettier": "^3.3.2"
 	}
 }
