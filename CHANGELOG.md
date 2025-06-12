@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.5](https://github.com/x2od/prettier-config/compare/v0.0.4...v0.0.5) (2025-06-12)
+
+
+### Miscellaneous Chores
+
+* **prettier:** Update yaml quotes, require v3 ([7b2bcd1](https://github.com/x2od/prettier-config/commit/7b2bcd1348792ae41f659273c26e40b26ba4bbc5))
+* **renovate:** Add renovate to auto-update dependencies ([782737b](https://github.com/x2od/prettier-config/commit/782737b13389ae8de04688a4afba277a289256ba))
+
 ## [0.0.4](https://github.com/x2od/prettier-config/compare/v0.0.3...v0.0.4) (2024-06-17)
 
 
