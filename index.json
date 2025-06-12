@@ -62,7 +62,7 @@
 			"files": "*.{yml,yaml}",
 			"options": {
 				"parser": "yaml",
-				"singleQuote": false,
+				"singleQuote": true,
 				"useTabs": false
 			}
 		},
