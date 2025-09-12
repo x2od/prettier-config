@@ -18,11 +18,26 @@
 			"options": {
 				"attributeGroups": [
 					"^id$",
+					"^aura:id$",
 					"^name$",
+					"^src$",
+					"^for$",
+					"^type$",
+					"^href$",
+					"^value$",
+					"^title$",
+					"^alt$",
+					"^role$",
 					"$DEFAULT",
+					"^aria-",
 					"^html-",
+					"$TYPE",
+					"^access$",
+					"^description$",
 					"^class$",
-					"aria-"
+					"^data-",
+					"$ARIA",
+					"^on"
 				],
 				"attributeIgnoreCase": true,
 				"parser": "html",
@@ -50,9 +65,17 @@
 			}
 		},
 		{
+			"files": "['**/pmd/*.xml', 'ruleset.xml']",
+			"options": {
+				"parser": "xml",
+				"useTabs": true,
+				"xmlSelfClosingSpace": true,
+				"xmlWhitespaceSensitivity": "preserve"
+			}
+		},
+		{
 			"files": "*meta.xml",
 			"options": {
-				"bracketSameLine": true,
 				"parser": "xml",
 				"useTabs": false,
 				"xmlSelfClosingSpace": false
@@ -62,20 +85,15 @@
 			"files": "*.{yml,yaml}",
 			"options": {
 				"parser": "yaml",
-				"singleQuote": false,
+				"singleQuote": true,
 				"useTabs": false
-			}
-		},
-		{
-			"files": [".prettierrc.js", ".prettierrc"],
-			"options": {
-				"printWidth": 80,
-				"singleQuote": false
 			}
 		},
 		{
 			"files": ".prettierrc",
 			"options": {
+				"printWidth": 80,
+				"singleQuote": false,
 				"parser": "json"
 			}
 		},
@@ -83,16 +101,8 @@
 			"files": "*.json",
 			"options": {
 				"parser": "json",
-				"printWidth": 80
-			}
-		},
-		{
-			"files": "['**/pmd/*.xml', 'ruleset.xml']",
-			"options": {
-				"parser": "xml",
-				"useTabs": true,
-				"xmlSelfClosingSpace": true,
-				"xmlWhitespaceSensitivity": "preserve"
+				"printWidth": 80,
+				"singleQuote": false
 			}
 		},
 		{
@@ -109,8 +119,34 @@
 			"files": "**/lwc/**/*.html",
 			"options": {
 				"parser": "lwc",
-				"printWidth": 80
+				"printWidth": 120,
+				"attributeGroups": [
+					"^lwc",
+					"^id$",
+					"^name$",
+					"^src$",
+					"^for$",
+					"^type$",
+					"^href$",
+					"^value$",
+					"^title$",
+					"^alt$",
+					"^role$",
+					"^aria-",
+					"^html-",
+					"$TYPE",
+					"^access$",
+					"^description$",
+					"^class$",
+					"^data-",
+					"$ARIA",
+					"^on"
+				]
 			}
+		},
+		{
+			"files": "*.json5",
+			"options": { "quote-props": "consistent", "parser": "jsonc" }
 		}
 	],
 	"plugins": [
