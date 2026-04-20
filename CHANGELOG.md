@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.0.5](https://github.com/x2od/prettier-config/compare/v0.0.4...v0.0.5) (2026-04-20)
+
+
+### Features
+
+* Attribute order changes for HTML ([e9a9169](https://github.com/x2od/prettier-config/commit/e9a9169b6528947ebd68c74f6047085cc04a4795))
+* Configuration updates ([#20](https://github.com/x2od/prettier-config/issues/20)) ([e9a9169](https://github.com/x2od/prettier-config/commit/e9a9169b6528947ebd68c74f6047085cc04a4795))
+
+
+### Miscellaneous Chores
+
+* **prettier:** Update yaml quotes, require v3 ([7b2bcd1](https://github.com/x2od/prettier-config/commit/7b2bcd1348792ae41f659273c26e40b26ba4bbc5))
+* **renovate:** Add renovate to auto-update dependencies ([782737b](https://github.com/x2od/prettier-config/commit/782737b13389ae8de04688a4afba277a289256ba))
+
+
+### Documentation
+
+* **README:** Update explanation of how to extend configuration ([e9a9169](https://github.com/x2od/prettier-config/commit/e9a9169b6528947ebd68c74f6047085cc04a4795))
+
+
+### Continuous Integration
+
+* **release-please:** Fix conditional to run steps ([e9a9169](https://github.com/x2od/prettier-config/commit/e9a9169b6528947ebd68c74f6047085cc04a4795))
+* **release-please:** Use correct release-please action ([#22](https://github.com/x2od/prettier-config/issues/22)) ([2d7c5f9](https://github.com/x2od/prettier-config/commit/2d7c5f951f4a43d1414566aed9252409279bb81e))
+
+
+### Build System
+
+* Add prettier extender file for immediate testing ([e9a9169](https://github.com/x2od/prettier-config/commit/e9a9169b6528947ebd68c74f6047085cc04a4795))
+
 ## [0.0.4](https://github.com/x2od/prettier-config/compare/v0.0.3...v0.0.4) (2024-06-17)
 
 
