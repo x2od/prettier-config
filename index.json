@@ -90,11 +90,10 @@
 			}
 		},
 		{
-			"files": ".prettierrc",
+			"files": [".prettierrc*"],
 			"options": {
 				"printWidth": 80,
-				"singleQuote": false,
-				"parser": "json"
+				"singleQuote": false
 			}
 		},
 		{
@@ -103,6 +102,15 @@
 				"parser": "json",
 				"printWidth": 80,
 				"singleQuote": false
+			}
+		},
+		{
+			"files": "['**/pmd/*.xml', 'ruleset.xml', 'pmd*.xml']",
+			"options": {
+				"parser": "xml",
+				"useTabs": true,
+				"xmlSelfClosingSpace": true,
+				"xmlWhitespaceSensitivity": "preserve"
 			}
 		},
 		{

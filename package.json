@@ -1,6 +1,6 @@
 {
 	"name": "@x2od/prettier-config",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "X-Squared base Prettier configuration",
 	"scripts": {
 		"prettier": "prettier --write .",
@@ -42,6 +42,9 @@
 		"prettier-plugin-organize-attributes": {
 			"optional": false
 		}
+	},
+	"peerDependencies": {
+		"prettier": ">=3.0.0"
 	},
 	"devDependencies": {
 		"@x2od/prettier-config": "^0.0.3",

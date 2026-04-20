@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.0.4](https://github.com/x2od/prettier-config/compare/v0.0.3...v0.0.4) (2024-06-17)
+
+
+### Features
+
+* **html:** Put id first, then name, then default ([e317b43](https://github.com/x2od/prettier-config/commit/e317b43ca68be4b089a59471fd7e2c8ec3db2c29))
+
+
+### Documentation
+
+* **README:** Add disclaimer on extension quote ([e522243](https://github.com/x2od/prettier-config/commit/e522243d9064879a89c83c98efb0ab27a6c3051d))
+
+
+### Build System
+
+* Redo Prettier config files ([#9](https://github.com/x2od/prettier-config/issues/9)) ([bad7670](https://github.com/x2od/prettier-config/commit/bad76709831cc77df1b90fee50ab1b587f555677))
+
 ## [0.0.3](https://github.com/x2od/prettier-config/compare/v0.0.2...v0.0.3) (2024-06-16)
 
 
