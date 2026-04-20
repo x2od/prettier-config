@@ -1,5 +1,5 @@
 {
-	"$schema": "https://json.schemastore.org/prettierrc",
+	"$schema": "https://json.schemastore.org/prettierrc.json",
 	"apexInsertFinalNewline": false,
 	"bracketSameLine": true,
 	"bracketSpacing": true,
@@ -29,7 +29,6 @@
 					"^alt$",
 					"^role$",
 					"$DEFAULT",
-					"^aria-",
 					"^html-",
 					"$TYPE",
 					"^access$",
@@ -37,6 +36,7 @@
 					"^class$",
 					"^data-",
 					"$ARIA",
+					"^aria-",
 					"^on"
 				],
 				"attributeIgnoreCase": true,
@@ -146,7 +146,7 @@
 		},
 		{
 			"files": "*.json5",
-			"options": { "quote-props": "consistent", "parser": "jsonc" }
+			"options": { "quote-props": "consistent", "parser": "json5" }
 		}
 	],
 	"plugins": [
