@@ -29,8 +29,8 @@
 	"bugs": "https://github.com/x2od/prettier-config/issues",
 	"homepage": "https://github.com/x2od/prettier-config#readme",
 	"dependencies": {
-		"@prettier/plugin-xml": "^3.0.0",
-		"prettier-plugin-apex": "^2.0.0",
+		"@prettier/plugin-xml": "^3.4.0",
+		"prettier-plugin-apex": "^2.2.0",
 		"prettier-plugin-organize-attributes": "^1.0.0"
 	},
 	"peerDependenciesMeta": {
@@ -45,10 +45,10 @@
 		}
 	},
 	"peerDependencies": {
-		"prettier": ">=3.0.0"
+		"prettier": ">=3.8.0"
 	},
 	"devDependencies": {
 		"@x2od/prettier-config": "^0.0.3",
-		"prettier": ">=3.0.0"
+		"prettier": ">=3.8.0"
 	}
 }
