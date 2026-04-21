@@ -48,7 +48,7 @@
 		"prettier": ">=3.8.0"
 	},
 	"devDependencies": {
-		"@x2od/prettier-config": "^0.0.3",
+		"@x2od/prettier-config": "^0.0.3 || ^0.0.6",
 		"prettier": ">=3.8.0"
 	}
 }
