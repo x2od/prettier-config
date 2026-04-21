@@ -14,5 +14,6 @@
 	"lockFileMaintenance": {
 		"enabled": false
 	},
-	"configWarningReuseIssue": false
+	"configWarningReuseIssue": false,
+	"rangeStrategy": "widen"
 }
