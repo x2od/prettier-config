@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.0.6](https://github.com/x2od/prettier-config/compare/v0.0.5...v0.0.6) (2026-04-21)
+
+
+### Bug Fixes
+
+* **renovate:** Move renovate file to correct location ([#23](https://github.com/x2od/prettier-config/issues/23)) ([f9732f1](https://github.com/x2od/prettier-config/commit/f9732f146ee19366c73ce54692afc7da2d9058ad))
+
+
+### Continuous Integration
+
+* **actions/checkout:** Update actions/checkout action from v4 to v6 ([#28](https://github.com/x2od/prettier-config/issues/28)) ([91fefba](https://github.com/x2od/prettier-config/commit/91fefba9c88ecde35d1aa7323c43fc13b4d61988))
+* **actions/setup-node:** Update actions/setup-node action from v4 to v6 ([#29](https://github.com/x2od/prettier-config/issues/29)) ([5c0baf1](https://github.com/x2od/prettier-config/commit/5c0baf1e4890cfa12f4d3c41ea66cc46ed293eba))
+
+
+### Build System
+
+* Pin dependencies to minor version ([f8ab5a5](https://github.com/x2od/prettier-config/commit/f8ab5a5fe40a069ed9622abcee35722bee2e48ae))
+* **renovate:** Allow wide dependencies for Prettier plugins ([525a392](https://github.com/x2od/prettier-config/commit/525a392aa5ed4c9190a313908aab0d9d2b63162e))
+
 ## [0.0.5](https://github.com/x2od/prettier-config/compare/v0.0.4...v0.0.5) (2026-04-20)
 
 
