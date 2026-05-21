@@ -9,6 +9,10 @@
 		{
 			"matchDepTypes": ["peerDependencies", "dependencies"],
 			"rangeStrategy": "bump"
+		},
+		{
+			"matchDepTypes": ["dependencies"],
+			"commitMessagePrefix": "deps"
 		}
 	],
 	"major": { "autoApprove": true, "automerge": false, "addLabels": ["renovate", "major"] },
