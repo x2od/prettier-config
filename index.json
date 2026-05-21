@@ -61,7 +61,8 @@
 		{
 			"files": "*.{apex,soql}",
 			"options": {
-				"parser": "apex-anonymous"
+				"parser": "apex-anonymous",
+				"useTabs": false
 			}
 		},
 		{
