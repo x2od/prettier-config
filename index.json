@@ -10,7 +10,7 @@
 	"singleQuote": true,
 	"tabWidth": 2,
 	"trailingComma": "none",
-	"useTabs": true,
+	"useTabs": false,
 	"xmlSelfClosingSpace": true,
 	"overrides": [
 		{
@@ -49,7 +49,7 @@
 			"options": {
 				"parser": "apex",
 				"tabWidth": 2,
-				"useTabs": true
+				"useTabs": false
 			}
 		},
 		{
