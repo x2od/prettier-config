@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.0.7](https://github.com/x2od/prettier-config/compare/v0.0.6...v0.0.7) (2026-05-21)
+
+
+### Bug Fixes
+
+* Use spaces by default in apex ([#36](https://github.com/x2od/prettier-config/issues/36)) ([5e4325e](https://github.com/x2od/prettier-config/commit/5e4325ef8028701f30bea1e5a4e4608267d5982f))
+
+
+### Miscellaneous Chores
+
+* **@prettier/plugin-xml:** Update dependency @prettier/plugin-xml from 3.4.1 to 3.4.2 ([#37](https://github.com/x2od/prettier-config/issues/37)) ([eadcc55](https://github.com/x2od/prettier-config/commit/eadcc553d6963dc23cef110df204696cbbb89db6))
+* **prettier-plugin-apex:** Update dependency prettier-plugin-apex from 2.2.0 to 2.2.6 ([86136c3](https://github.com/x2od/prettier-config/commit/86136c38e3e167a88fc6c0a06fcf7181cf315d68))
+* **prettier:** Update dependency prettier from 3.8.1 to 3.8.3 ([#39](https://github.com/x2od/prettier-config/issues/39)) ([4e72501](https://github.com/x2od/prettier-config/commit/4e725013165c618c78c469d7667694a09c985281))
+* **release-please:** Add deps section ([55d52bd](https://github.com/x2od/prettier-config/commit/55d52bd95fb004aa385c57d2f2cb49a92911e399))
+* **renovate:** Update range strategy ([55d52bd](https://github.com/x2od/prettier-config/commit/55d52bd95fb004aa385c57d2f2cb49a92911e399))
+
+
+### Continuous Integration
+
+* **googleapis/release-please-action:** Update googleapis/release-please-action action from v4 to v5.0.0 ([#34](https://github.com/x2od/prettier-config/issues/34)) ([a0cff40](https://github.com/x2od/prettier-config/commit/a0cff401c0463a92912a7cff576f49124f9ba7eb))
+
+
+### Build System
+
+* **@x2od/prettier-config:** Update dependency @x2od/prettier-config from 0.0.3 to 0.0.6 ([#30](https://github.com/x2od/prettier-config/issues/30)) ([2a38077](https://github.com/x2od/prettier-config/commit/2a38077a7526a0cbe9f3e45473c454e1d23d2736))
+* **release-please:** Update cache for setup-node ([4763275](https://github.com/x2od/prettier-config/commit/4763275337fd4f37dc562320d5b5a3a07aaa5adf))
+* Update some dependencies for renovate to find ([75a0b50](https://github.com/x2od/prettier-config/commit/75a0b50feaadaa19a5b220b860cfc8473d63b294))
+
 ## [0.0.6](https://github.com/x2od/prettier-config/compare/v0.0.5...v0.0.6) (2026-04-21)
 
 
