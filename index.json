@@ -49,7 +49,7 @@
 			"options": {
 				"parser": "apex",
 				"tabWidth": 2,
-				"useTabs": true
+				"useTabs": false
 			}
 		},
 		{
@@ -61,7 +61,8 @@
 		{
 			"files": "*.{apex,soql}",
 			"options": {
-				"parser": "apex-anonymous"
+				"parser": "apex-anonymous",
+				"useTabs": false
 			}
 		},
 		{
