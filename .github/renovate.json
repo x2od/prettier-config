@@ -5,6 +5,10 @@
 		{
 			"matchManagers": ["github-actions"],
 			"commitMessageExtra": "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{newVersion}}{{else}}{{#if isSingleVersion}}{{newVersion}}{{else}}{{#if newValue}}{{{newVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
+		},
+		{
+			"matchDepTypes": ["peerDependencies", "dependencies"],
+			"rangeStrategy": "bump"
 		}
 	],
 	"major": { "autoApprove": true, "automerge": false, "addLabels": ["renovate", "major"] },
@@ -12,7 +16,7 @@
 	"patch": { "autoApprove": true, "automerge": true, "addLabels": ["renovate", "patch"] },
 	"dependencyDashboardAutoclose": true,
 	"lockFileMaintenance": {
-		"enabled": true
+		"enabled": false
 	},
 	"configWarningReuseIssue": false,
 	"rangeStrategy": "widen"
