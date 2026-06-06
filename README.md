@@ -1,144 +1,188 @@
 # `@x2od/prettier-config`
 
-> A shared [Prettier](https://prettier.io) config for X-Squared on Demand.
+> A shared [Prettier](https://prettier.io) config for [X-Squared on Demand](https://www.x2od.com).
 
 ## Installation
-
-To install this package run the following command in the terminal in the root directory of your application.
 
 ```bash
 npm install --save-dev @x2od/prettier-config
 ```
 
-## Usage
+## Basic Usage
 
-Reference it in `package.json` using the `prettier` property:
+Prettier supports multiple ways to reference this config in a project. Choose one:
+
+**Via `package.json`:**
 
 ```json
 {
-  "name": "my-projects-name",
-  "prettier": "@x2od/prettier-config",
-  "devDependencies": {
-    "@x2od/prettier-config": "latest"
-  }
+	"prettier": "@x2od/prettier-config"
 }
 ```
 
-**OR**
+**Via `.prettierrc` (JSON or YAML):**
 
-If you don't want to use `package.json`, you can use any of the supported
-extensions to export a string:
-
-```jsonc
-// `.prettierrc.json` or `.prettierrc` or `.prettierrc.yaml` or `.prettierrc.yml` or `prettierrc.json`
+```json
 "@x2od/prettier-config"
 ```
 
-**OR**
-
-Create a `prettier.config.js` or `.prettierrc.js` file and export an object.
-
-To use the configuration as written:
+**Via `prettier.config.js` or `.prettierrc.js`:**
 
 ```js
-// `prettier.config.js` or `.prettierrc.js`
 module.exports = '@x2od/prettier-config';
 ```
 
-To *extend* the configuration to overwrite some properties from the shared configuration, import the file in a `prettier.config.mjs` file and export the modifications, e.g:
-<!-- prettier-ignore -->
+**Via `prettier.config.mjs`, or `.prettierrc.mjs`:**
+
 ```js
-// prettier.config.mjs
-import x2odPrettierConfig from "@x2od/prettier-config";
+import x2odPrettierConfig from '@x2od/prettier-config';
+export default x2odPrettierConfig;
+```
+
+## Default Configuration
+
+This config includes sensible defaults optimized for Salesforce development and general web projects:
+
+**Base settings:**
+
+- **printWidth**: 180
+- **tabWidth**: 2
+- **useTabs**: true
+- **singleQuote**: true
+- **trailingComma**: "none"
+- **bracketSpacing**: true
+- **bracketSameLine**: true
+- **endOfLine**: "lf"
+
+**File-specific overrides** are included for:
+
+- `.{cmp,page,component}` — Salesforce Lightning components
+- `.{cls,trigger}` — Apex classes and triggers
+- `.{apex,soql}` — Apex anonymous and SOQL
+- `*.xml` — XML with custom attribute grouping
+- `.{yml,yaml}` — YAML files
+- `*.json` — JSON files (printWidth: 80)
+- `.prettierrc*` — Prettier config files (printWidth: 80)
+- `.html` — HTML files with custom attribute grouping
+
+**Plugins:**
+
+- `prettier-plugin-apex` — Apex language support
+- `@prettier/plugin-xml` — XML formatting
+- `prettier-plugin-organize-attributes` — HTML attribute organization
+
+## Extending Shared Configurations
+
+While this configuration is designed to be used as-is, you can extend it if your project requires custom overrides. Prettier does not offer an "extends" mechanism like ESLint.
+
+Prettier uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for
+configuration file support. This means you can configure prettier via:
+
+- A `.prettierrc` file, written in YAML or JSON, with optional extensions: `.yaml/.yml/.json`.
+- A `prettier.config.js`, `.prettierrc.js`,`prettier.config.mjs`, or `.prettierrc.mjs` file that exports an object.
+- A `"prettier"` key in your `package.json` file.
+
+To extend the configuration, import/require it in a JavaScript config file and export your modifications:
+
+**With CommonJS (`.js`):**
+
+```javascript
+// prettier.config.js or .prettierrc.js
+const x2odPrettierConfig = require('@x2od/prettier-config');
+
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+module.exports = {
+	...x2odPrettierConfig,
+	printWidth: 100,
+	overrides: [
+		...x2odPrettierConfig.overrides,
+		{
+			files: '*.sh',
+			options: {
+				parser: 'sh',
+				useTabs: false
+			}
+		}
+	],
+	plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
+};
+```
+
+You can also inline the `require()` call:
+
+```javascript
+// prettier.config.js
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+module.exports = {
+	...require('@x2od/prettier-config'),
+	overrides: [
+		{
+			files: 'index.json',
+			options: {
+				singleQuote: false,
+				printWidth: 80
+			}
+		},
+		{
+			files: '.prettierrc.js',
+			options: {
+				singleQuote: true
+			}
+		}
+	]
+};
+```
+
+**With ES modules (`.mjs`):**
+
+```javascript
+// .prettierrc.mjs or prettier.config.mjs ESM
+import x2odPrettierConfig from '@x2od/prettier-config' with { type: 'json' };
+// The json type specification is because this package has a JSON configuration file.
+// If your package exports javascript, you will not need this.
 
 /**
  * @see https://prettier.io/docs/configuration
  * @type {import("prettier").Config}
  */
 const config = {
-  ...x2odPrettierConfig,
-  semi: false,
+	...x2odPrettierConfig,
+	$schema: 'https://json.schemastore.org/prettierrc',
+	printWidth: 180,
+	overrides: [
+		...x2odPrettierConfig.overrides,
+		{
+			files: '*.sh',
+			options: {
+				parser: 'sh'
+			}
+		}
+	],
+	plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
 };
 
 export default config;
 ```
 
-### Extending Shared Configurations
+Note that additional plugins must be added as devDependencies in the project.
 
-This configuration is not intended to be changed, but if you have a setup where
-modification is required, it is possible. Prettier does not offer an "extends"
-mechanism as you might be familiar from tools such as ESLint.
+## Configuration Considerations
 
-To extend a configuration you will need to:
+When adding overrides, use a single string pattern for `files` (not arrays). Use curly braces for alternation:
 
-1.  Import/Require this sharable config from within your own configuration. This means you must be using a JavaScript version of a Prettier configuration file.
-1.  Export the modified configuration
-
-Prettier uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for
-configuration file support. This means you can configure prettier via:
-
-- A `.prettierrc` file, written in YAML or JSON, with optional extensions: `.yaml/.yml/.json`.
-- A `prettier.config.js` or `.prettierrc.js` file that exports an object.
-- A `"prettier"` key in your `package.json` file.
-
-**Sharing configurations**
->
-> Note: This method does **not** offer a way to _extend_ the configuration to overwrite some properties from the shared configuration. If you need to do that, import the file in a `.prettierrc.js` file and export the modifications, e.g:
->
-> ```js
-> import x2odPrettierConfig from '@x2od/prettier-config';
->
-> export default {
->  ...x2odPrettierConfig,
->  semi: false
-> };
-> ```
->
-> _source: <https://github.com/prettier/prettier/blob/main/docs/configuration.md>_
-
-**NOTE: THE ABOVE DOES NOT WORK! You will get an error that you cannot use import outside of a module. Please use the below instead.**
-
-For example, if you need to change it so that semicolons are required:
-
-```javascript
-// `prettier.config.js` or `.prettierrc.js`
-const x2odPrettierConfig = require('@x2od/prettier-config');
-
-module.exports = {
-  ...x2odPrettierConfig,
-  semi: true
-};
-```
-
-### Configuration Considerations
-
-WHen extending, in the `js` configuration file, do not use an array for files. You must use a single string, but can put alternate values in curly braces:
-
-```javascript
+```json
 {
-  files: '*.{yaml,yml}', // ['*.yaml','*.yml'] does not work
-  options: {
-    singleQuote: true
-  }
+	"files": "*.{yaml,yml}",
+	"options": {
+		"singleQuote": true
+	}
 }
 ```
 
-To extend any section of the original file, refer to the original configuration and its attribute:
-
-```javascript
-module.exports = {
-  //...require('@x2od/prettier-config'),
-  ...x2odPrettierConfig,
-  $schema: 'https://json.schemastore.org/prettierrc',
-  overrides: [
-    ...x2odPrettierConfig.overrides,
-    {
-      files: '*.sh',
-      options: {
-        parser: 'sh'
-      }
-    }
-  ],
-  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
-};
-```
+When extending sections like `overrides` and `plugins`, be sure to spread the original config's values (`...x2odPrettierConfig.overrides` and `...x2odPrettierConfig.plugins`) to preserve them. If adding plugins, install them as local devDependencies.
