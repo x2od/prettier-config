@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.8](https://github.com/x2od/prettier-config/compare/v0.0.7...v0.0.8) (2026-06-09)
+
+
+### Documentation
+
+* **readme:** Improve documentation and configuration ([#44](https://github.com/x2od/prettier-config/issues/44)) ([6932787](https://github.com/x2od/prettier-config/commit/6932787649e16711a564df14fbd398d8db2765e7))
+
+
+### Build System
+
+* **@x2od/prettier-config:** Update devdependency @x2od/prettier-config from 0.0.6 to 0.0.7 ([#41](https://github.com/x2od/prettier-config/issues/41)) ([337caba](https://github.com/x2od/prettier-config/commit/337cabadb94d404bba8680d8fbfe7d5d12407763))
+* **prettier:** Update devdependency prettier from 3.8.3 to 3.8.3 ([#40](https://github.com/x2od/prettier-config/issues/40)) ([2dee9ce](https://github.com/x2od/prettier-config/commit/2dee9ce52e32722ca2ea73f7345c4440d1e4cec0))
+* **prettier:** Update peerdependency prettier from 3.8.3 to 3.8.4 ([#45](https://github.com/x2od/prettier-config/issues/45)) ([72230f3](https://github.com/x2od/prettier-config/commit/72230f35b74a6585a25e4fd151ed802fe58af4eb))
+
 ## [0.0.7](https://github.com/x2od/prettier-config/compare/v0.0.6...v0.0.7) (2026-05-21)
 
 
