@@ -30,7 +30,7 @@
 	"homepage": "https://github.com/x2od/prettier-config#readme",
 	"dependencies": {
 		"@prettier/plugin-xml": "^3.4.2",
-		"prettier-plugin-apex": "^2.2.6",
+		"prettier-plugin-apex": "^2.3.0",
 		"prettier-plugin-organize-attributes": "^1.0.0"
 	},
 	"peerDependenciesMeta": {
