@@ -45,10 +45,10 @@
 		}
 	},
 	"peerDependencies": {
-		"prettier": ">=3.9.0"
+		"prettier": ">=3.9.1"
 	},
 	"devDependencies": {
 		"@x2od/prettier-config": "^0.0.7",
-		"prettier": "^3.9.0"
+		"prettier": "^3.9.1"
 	}
 }
