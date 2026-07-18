@@ -16,7 +16,7 @@ Prettier supports multiple ways to reference this config in a project. Choose on
 
 ```json
 {
-	"prettier": "@x2od/prettier-config"
+  "prettier": "@x2od/prettier-config"
 }
 ```
 
@@ -98,19 +98,19 @@ const x2odPrettierConfig = require('@x2od/prettier-config');
  * @type {import("prettier").Config}
  */
 module.exports = {
-	...x2odPrettierConfig,
-	printWidth: 100,
-	overrides: [
-		...x2odPrettierConfig.overrides,
-		{
-			files: '*.sh',
-			options: {
-				parser: 'sh',
-				useTabs: false
-			}
-		}
-	],
-	plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
+  ...x2odPrettierConfig,
+  printWidth: 100,
+  overrides: [
+    ...x2odPrettierConfig.overrides,
+    {
+      files: '*.sh',
+      options: {
+        parser: 'sh',
+        useTabs: false
+      }
+    }
+  ],
+  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
 };
 ```
 
@@ -123,22 +123,22 @@ You can also inline the `require()` call:
  * @type {import("prettier").Config}
  */
 module.exports = {
-	...require('@x2od/prettier-config'),
-	overrides: [
-		{
-			files: 'index.json',
-			options: {
-				singleQuote: false,
-				printWidth: 80
-			}
-		},
-		{
-			files: '.prettierrc.js',
-			options: {
-				singleQuote: true
-			}
-		}
-	]
+  ...require('@x2od/prettier-config'),
+  overrides: [
+    {
+      files: 'index.json',
+      options: {
+        singleQuote: false,
+        printWidth: 80
+      }
+    },
+    {
+      files: '.prettierrc.js',
+      options: {
+        singleQuote: true
+      }
+    }
+  ]
 };
 ```
 
@@ -155,19 +155,19 @@ import x2odPrettierConfig from '@x2od/prettier-config' with { type: 'json' };
  * @type {import("prettier").Config}
  */
 const config = {
-	...x2odPrettierConfig,
-	$schema: 'https://json.schemastore.org/prettierrc',
-	printWidth: 180,
-	overrides: [
-		...x2odPrettierConfig.overrides,
-		{
-			files: '*.sh',
-			options: {
-				parser: 'sh'
-			}
-		}
-	],
-	plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
+  ...x2odPrettierConfig,
+  $schema: 'https://json.schemastore.org/prettierrc',
+  printWidth: 180,
+  overrides: [
+    ...x2odPrettierConfig.overrides,
+    {
+      files: '*.sh',
+      options: {
+        parser: 'sh'
+      }
+    }
+  ],
+  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
 };
 
 export default config;
@@ -181,10 +181,10 @@ When adding overrides, prefer a single string pattern with curly-brace alternati
 
 ```json
 {
-	"files": "*.{yaml,yml}",
-	"options": {
-		"singleQuote": true
-	}
+  "files": "*.{yaml,yml}",
+  "options": {
+    "singleQuote": true
+  }
 }
 ```
 

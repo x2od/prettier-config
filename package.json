@@ -1,47 +1,48 @@
 {
-	"name": "@x2od/prettier-config",
-	"version": "0.0.7",
-	"description": "X-Squared base Prettier configuration",
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/x2od/prettier-config.git"
-	},
-	"homepage": "https://github.com/x2od/prettier-config#readme",
-	"bugs": "https://github.com/x2od/prettier-config/issues",
-	"author": {
-		"name": "David Schach (X-Squared on Demand)",
-		"url": "https://github.com/x2od"
-	},
-	"license": "MIT",
-	"main": "index.json",
-	"files": [
-		"index.json"
-	],
-	"keywords": [
-		"prettier",
-		"x2od"
-	],
-	"scripts": {
-		"minor": "npm version minor",
-		"patch": "npm version patch",
-		"prettier": "prettier --write .",
-		"prettier:verify": "prettier --list-different .",
-		"renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
-	},
-	"peerDependencies": {
-		"prettier": ">=3.1.0"
-	},
-	"peerDependenciesMeta": {
-		"prettier": {
-			"optional": true
-		}
-	},
-	"dependencies": {
-		"@prettier/plugin-xml": "^3.4.2",
-		"prettier-plugin-apex": "^2.3.0",
-		"prettier-plugin-organize-attributes": "^1.0.0",
-		"prettier-plugin-pkg": "^0.22.1"
-	},
-	"devDependencies": {
-		"@x2od/prettier-config": "^0.0.7"	}
+  "name": "@x2od/prettier-config",
+  "version": "0.0.7",
+  "description": "X-Squared base Prettier configuration",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/x2od/prettier-config.git"
+  },
+  "homepage": "https://github.com/x2od/prettier-config#readme",
+  "bugs": "https://github.com/x2od/prettier-config/issues",
+  "author": {
+    "name": "David Schach (X-Squared on Demand)",
+    "url": "https://github.com/x2od"
+  },
+  "license": "MIT",
+  "main": "index.json",
+  "files": [
+    "index.json"
+  ],
+  "keywords": [
+    "prettier",
+    "x2od"
+  ],
+  "scripts": {
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "prettier": "prettier --write .",
+    "prettier:verify": "prettier --list-different .",
+    "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.1.0"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@prettier/plugin-xml": "^3.4.2",
+    "prettier-plugin-apex": "^2.3.0",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "prettier-plugin-pkg": "^0.22.1"
+  },
+  "devDependencies": {
+    "@x2od/prettier-config": "^0.0.7"
+  }
 }
