@@ -47,9 +47,7 @@
 		{
 			"files": "*.{cls,trigger}",
 			"options": {
-				"parser": "apex",
-				"tabWidth": 2,
-				"useTabs": false
+				"parser": "apex"
 			}
 		},
 		{
@@ -61,15 +59,13 @@
 		{
 			"files": "*.{apex,soql}",
 			"options": {
-				"parser": "apex-anonymous",
-				"useTabs": false
+				"parser": "apex-anonymous"
 			}
 		},
 		{
-			"files": "['**/pmd/*.xml', 'ruleset.xml']",
+			"files": ["**/pmd/*.xml", "ruleset.xml", "pmd*.xml"],
 			"options": {
 				"parser": "xml",
-				"useTabs": true,
 				"xmlSelfClosingSpace": true,
 				"xmlWhitespaceSensitivity": "preserve"
 			}
@@ -79,7 +75,8 @@
 			"options": {
 				"parser": "xml",
 				"useTabs": false,
-				"xmlSelfClosingSpace": false
+				"xmlSelfClosingSpace": false,
+				"tabWidth": 4
 			}
 		},
 		{
@@ -91,10 +88,22 @@
 			}
 		},
 		{
-			"files": [".prettierrc*"],
+			"files": [".prettier*", "*prettier*js"],
 			"options": {
 				"printWidth": 80,
 				"singleQuote": false
+			}
+		},
+		{
+			"files": "*.css",
+			"options": {
+				"useTabs": false
+			}
+		},
+		{
+			"files": "*.md",
+			"options": {
+				"useTabs": false
 			}
 		},
 		{
@@ -102,16 +111,8 @@
 			"options": {
 				"parser": "json",
 				"printWidth": 80,
+				"useTabs": false,
 				"singleQuote": false
-			}
-		},
-		{
-			"files": "['**/pmd/*.xml', 'ruleset.xml', 'pmd*.xml']",
-			"options": {
-				"parser": "xml",
-				"useTabs": true,
-				"xmlSelfClosingSpace": true,
-				"xmlWhitespaceSensitivity": "preserve"
 			}
 		},
 		{
@@ -155,12 +156,20 @@
 		},
 		{
 			"files": "*.json5",
-			"options": { "quote-props": "consistent", "parser": "json5" }
+			"options": { "quoteProps": "consistent", "parser": "json5" }
+		},
+		{
+			"files": "package.json",
+			"options": {
+				"parser": "json-stringify",
+"singleQuote":false,				"printWidth": 80
+			}
 		}
 	],
 	"plugins": [
 		"prettier-plugin-apex",
 		"@prettier/plugin-xml",
-		"prettier-plugin-organize-attributes"
+		"prettier-plugin-organize-attributes",
+		"prettier-plugin-pkg"
 	]
 }

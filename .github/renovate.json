@@ -7,21 +7,20 @@
 			"commitMessageExtra": "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{newVersion}}{{else}}{{#if isSingleVersion}}{{newVersion}}{{else}}{{#if newValue}}{{{newVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
 		},
 		{
-			"matchDepTypes": ["peerDependencies", "dependencies"],
-			"rangeStrategy": "bump"
+			"matchDepTypes": ["dependencies"],
+			"rangeStrategy": "replace",
+			"semanticCommitType": "build"
 		},
 		{
-			"matchDepTypes": ["dependencies"],
-			"commitMessagePrefix": "deps"
-		}
+			"matchPackageNames": ["prettier"],
+"matchUpdateTypes":["major"]		}
 	],
-	"major": { "autoApprove": true, "automerge": false, "addLabels": ["renovate", "major"] },
+	"major": { "autoApprove": false, "automerge": false, "addLabels": ["renovate", "major"] },
 	"minor": { "autoApprove": true, "automerge": true, "addLabels": ["renovate", "minor"] },
 	"patch": { "autoApprove": true, "automerge": true, "addLabels": ["renovate", "patch"] },
 	"dependencyDashboardAutoclose": true,
 	"lockFileMaintenance": {
 		"enabled": false
 	},
-	"configWarningReuseIssue": false,
-	"rangeStrategy": "widen"
+	"configWarningReuseIssue": false
 }

@@ -2,53 +2,46 @@
 	"name": "@x2od/prettier-config",
 	"version": "0.0.7",
 	"description": "X-Squared base Prettier configuration",
-	"scripts": {
-		"prettier": "prettier --write .",
-		"prettier:verify": "prettier --list-different .",
-		"minor": "npm version minor",
-		"patch": "npm version patch",
-		"renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/x2od/prettier-config.git"
 	},
-	"keywords": [
-		"prettier",
-		"x2od"
-	],
-	"files": [
-		"index.json"
-	],
-	"main": "index.json",
+	"homepage": "https://github.com/x2od/prettier-config#readme",
+	"bugs": "https://github.com/x2od/prettier-config/issues",
 	"author": {
 		"name": "David Schach (X-Squared on Demand)",
 		"url": "https://github.com/x2od"
 	},
 	"license": "MIT",
-	"bugs": "https://github.com/x2od/prettier-config/issues",
-	"homepage": "https://github.com/x2od/prettier-config#readme",
+	"main": "index.json",
+	"files": [
+		"index.json"
+	],
+	"keywords": [
+		"prettier",
+		"x2od"
+	],
+	"scripts": {
+		"minor": "npm version minor",
+		"patch": "npm version patch",
+		"prettier": "prettier --write .",
+		"prettier:verify": "prettier --list-different .",
+		"renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
+	},
+	"peerDependencies": {
+		"prettier": ">=3.1.0"
+	},
+	"peerDependenciesMeta": {
+		"prettier": {
+			"optional": true
+		}
+	},
 	"dependencies": {
 		"@prettier/plugin-xml": "^3.4.2",
 		"prettier-plugin-apex": "^2.3.0",
-		"prettier-plugin-organize-attributes": "^1.0.0"
-	},
-	"peerDependenciesMeta": {
-		"@prettier/plugin-xml": {
-			"optional": false
-		},
-		"prettier-plugin-apex": {
-			"optional": false
-		},
-		"prettier-plugin-organize-attributes": {
-			"optional": false
-		}
-	},
-	"peerDependencies": {
-		"prettier": ">=3.9.5"
+		"prettier-plugin-organize-attributes": "^1.0.0",
+		"prettier-plugin-pkg": "^0.22.1"
 	},
 	"devDependencies": {
-		"@x2od/prettier-config": "^0.0.7",
-		"prettier": "^3.9.5"
-	}
+		"@x2od/prettier-config": "^0.0.7"	}
 }
