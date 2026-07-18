@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.0.8](https://github.com/x2od/prettier-config/compare/v0.0.7...v0.0.8) (2026-07-18)
+
+
+### Features
+
+* **config:** Reconfigure dependencies and refine tab/space rules ([#55](https://github.com/x2od/prettier-config/issues/55)) ([4bbfad4](https://github.com/x2od/prettier-config/commit/4bbfad487f77c66ff3aba3dd5a3b0e773810e479))
+* **config:** Sort package.json fields via prettier-plugin-pkg ([4bbfad4](https://github.com/x2od/prettier-config/commit/4bbfad487f77c66ff3aba3dd5a3b0e773810e479))
+
+
+### Bug Fixes
+
+* **config:** Correct PMD ruleset glob from stringified array to real array ([4bbfad4](https://github.com/x2od/prettier-config/commit/4bbfad487f77c66ff3aba3dd5a3b0e773810e479))
+* **config:** Use valid quoteProps key for *.json5 override ([4bbfad4](https://github.com/x2od/prettier-config/commit/4bbfad487f77c66ff3aba3dd5a3b0e773810e479))
+
+
+### Miscellaneous Chores
+
+* **release-please:** Add release-please devDependency ([225fead](https://github.com/x2od/prettier-config/commit/225feadaae6b3f8ad782293345f3afd30543b040))
+
+
+### Documentation
+
+* **readme:** Improve documentation and configuration ([#44](https://github.com/x2od/prettier-config/issues/44)) ([6932787](https://github.com/x2od/prettier-config/commit/6932787649e16711a564df14fbd398d8db2765e7))
+
+
+### Build System
+
+* **@x2od/prettier-config:** Update devdependency @x2od/prettier-config from 0.0.6 to 0.0.7 ([#41](https://github.com/x2od/prettier-config/issues/41)) ([337caba](https://github.com/x2od/prettier-config/commit/337cabadb94d404bba8680d8fbfe7d5d12407763))
+* **deps:** Make prettier an optional peerDependency and add prettier-plugin-pkg ([4bbfad4](https://github.com/x2od/prettier-config/commit/4bbfad487f77c66ff3aba3dd5a3b0e773810e479))
+* **prettier:** Update devdependency prettier from 3.8.3 to 3.8.3 ([#40](https://github.com/x2od/prettier-config/issues/40)) ([2dee9ce](https://github.com/x2od/prettier-config/commit/2dee9ce52e32722ca2ea73f7345c4440d1e4cec0))
+* **prettier:** Update peerdependency prettier from 3.8.3 to 3.8.4 ([#45](https://github.com/x2od/prettier-config/issues/45)) ([72230f3](https://github.com/x2od/prettier-config/commit/72230f35b74a6585a25e4fd151ed802fe58af4eb))
+* **prettier:** Update peerdependency prettier from 3.8.4 to 3.8.5 ([#49](https://github.com/x2od/prettier-config/issues/49)) ([857b4b0](https://github.com/x2od/prettier-config/commit/857b4b0480997c491573f2a498c9b93e406324d9))
+* **prettier:** Update peerdependency prettier from 3.8.5 to 3.9.0 ([#50](https://github.com/x2od/prettier-config/issues/50)) ([d15182c](https://github.com/x2od/prettier-config/commit/d15182cd496db9b0656d2b0767ad12a66d567cd8))
+* **prettier:** Update peerdependency prettier from 3.9.0 to 3.9.1 ([#51](https://github.com/x2od/prettier-config/issues/51)) ([0d5c5a7](https://github.com/x2od/prettier-config/commit/0d5c5a7613846890e49361c2219771ae86c7cee1))
+* **prettier:** Update peerdependency prettier from 3.9.1 to 3.9.3 ([#52](https://github.com/x2od/prettier-config/issues/52)) ([6202051](https://github.com/x2od/prettier-config/commit/6202051d235af292af57193265ff421bdfc72d58))
+* **prettier:** Update peerdependency prettier from 3.9.3 to 3.9.4 ([#53](https://github.com/x2od/prettier-config/issues/53)) ([f056650](https://github.com/x2od/prettier-config/commit/f056650a0deedda6f55bd4b6f87eb22efd160b2f))
+* **prettier:** Update peerdependency prettier from 3.9.4 to 3.9.5 ([#54](https://github.com/x2od/prettier-config/issues/54)) ([4aab500](https://github.com/x2od/prettier-config/commit/4aab500f63b0ef2da20d4cc418548226d68b1502))
+
 ## [0.0.7](https://github.com/x2od/prettier-config/compare/v0.0.6...v0.0.7) (2026-05-21)
 
 
