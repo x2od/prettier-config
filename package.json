@@ -44,7 +44,7 @@
     "prettier-plugin-pkg": "^0.22.1"
   },
   "devDependencies": {
-    "@x2od/prettier-config": "^0.0.7",
+    "@x2od/prettier-config": "^0.0.8",
     "release-please": "^17.10.3"
   }
 }
