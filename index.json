@@ -1,166 +1,176 @@
 {
-	"$schema": "https://json.schemastore.org/prettierrc.json",
-	"apexInsertFinalNewline": false,
-	"bracketSameLine": true,
-	"bracketSpacing": true,
-	"endOfLine": "lf",
-	"experimentalTernaries": true,
-	"printWidth": 180,
-	"singleAttributePerLine": false,
-	"singleQuote": true,
-	"tabWidth": 2,
-	"trailingComma": "none",
-	"useTabs": true,
-	"xmlSelfClosingSpace": true,
-	"overrides": [
-		{
-			"files": "*.{cmp,page,component}",
-			"options": {
-				"attributeGroups": [
-					"^id$",
-					"^aura:id$",
-					"^name$",
-					"^src$",
-					"^for$",
-					"^type$",
-					"^href$",
-					"^value$",
-					"^title$",
-					"^alt$",
-					"^role$",
-					"$DEFAULT",
-					"^html-",
-					"$TYPE",
-					"^access$",
-					"^description$",
-					"^class$",
-					"^data-",
-					"$ARIA",
-					"^aria-",
-					"^on"
-				],
-				"attributeIgnoreCase": true,
-				"parser": "html",
-				"singleQuote": false
-			}
-		},
-		{
-			"files": "*.{cls,trigger}",
-			"options": {
-				"parser": "apex",
-				"tabWidth": 2,
-				"useTabs": false
-			}
-		},
-		{
-			"files": "*.trigger",
-			"options": {
-				"printWidth": 200
-			}
-		},
-		{
-			"files": "*.{apex,soql}",
-			"options": {
-				"parser": "apex-anonymous",
-				"useTabs": false
-			}
-		},
-		{
-			"files": "['**/pmd/*.xml', 'ruleset.xml']",
-			"options": {
-				"parser": "xml",
-				"useTabs": true,
-				"xmlSelfClosingSpace": true,
-				"xmlWhitespaceSensitivity": "preserve"
-			}
-		},
-		{
-			"files": "*meta.xml",
-			"options": {
-				"parser": "xml",
-				"useTabs": false,
-				"xmlSelfClosingSpace": false
-			}
-		},
-		{
-			"files": "*.{yml,yaml}",
-			"options": {
-				"parser": "yaml",
-				"singleQuote": true,
-				"useTabs": false
-			}
-		},
-		{
-			"files": [".prettierrc*"],
-			"options": {
-				"printWidth": 80,
-				"singleQuote": false
-			}
-		},
-		{
-			"files": "*.json",
-			"options": {
-				"parser": "json",
-				"printWidth": 80,
-				"singleQuote": false
-			}
-		},
-		{
-			"files": "['**/pmd/*.xml', 'ruleset.xml', 'pmd*.xml']",
-			"options": {
-				"parser": "xml",
-				"useTabs": true,
-				"xmlSelfClosingSpace": true,
-				"xmlWhitespaceSensitivity": "preserve"
-			}
-		},
-		{
-			"files": "doc*/**/*.html",
-			"options": {
-				"attributeGroups": ["$CODE_GUIDE"],
-				"htmlWhitespaceSensitivity": "ignore",
-				"parser": "html",
-				"printWidth": 150,
-				"singleQuote": false
-			}
-		},
-		{
-			"files": "**/lwc/**/*.html",
-			"options": {
-				"parser": "lwc",
-				"printWidth": 120,
-				"attributeGroups": [
-					"^lwc",
-					"^id$",
-					"^name$",
-					"^src$",
-					"^for$",
-					"^type$",
-					"^href$",
-					"^value$",
-					"^title$",
-					"^alt$",
-					"^role$",
-					"^aria-",
-					"^html-",
-					"$TYPE",
-					"^access$",
-					"^description$",
-					"^class$",
-					"^data-",
-					"$ARIA",
-					"^on"
-				]
-			}
-		},
-		{
-			"files": "*.json5",
-			"options": { "quote-props": "consistent", "parser": "json5" }
-		}
-	],
-	"plugins": [
-		"prettier-plugin-apex",
-		"@prettier/plugin-xml",
-		"prettier-plugin-organize-attributes"
-	]
+  "$schema": "https://json.schemastore.org/prettierrc.json",
+  "apexInsertFinalNewline": false,
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "experimentalTernaries": true,
+  "printWidth": 180,
+  "singleAttributePerLine": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": true,
+  "xmlSelfClosingSpace": true,
+  "overrides": [
+    {
+      "files": "*.{cmp,page,component}",
+      "options": {
+        "attributeGroups": [
+          "^id$",
+          "^aura:id$",
+          "^name$",
+          "^src$",
+          "^for$",
+          "^type$",
+          "^href$",
+          "^value$",
+          "^title$",
+          "^alt$",
+          "^role$",
+          "$DEFAULT",
+          "^html-",
+          "$TYPE",
+          "^access$",
+          "^description$",
+          "^class$",
+          "^data-",
+          "$ARIA",
+          "^aria-",
+          "^on"
+        ],
+        "attributeIgnoreCase": true,
+        "parser": "html",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.{cls,trigger}",
+      "options": {
+        "parser": "apex"
+      }
+    },
+    {
+      "files": "*.trigger",
+      "options": {
+        "printWidth": 200
+      }
+    },
+    {
+      "files": "*.{apex,soql}",
+      "options": {
+        "parser": "apex-anonymous"
+      }
+    },
+    {
+      "files": ["**/pmd/*.xml", "ruleset.xml", "pmd*.xml"],
+      "options": {
+        "parser": "xml",
+        "xmlSelfClosingSpace": true,
+        "xmlWhitespaceSensitivity": "preserve"
+      }
+    },
+    {
+      "files": "*meta.xml",
+      "options": {
+        "parser": "xml",
+        "useTabs": false,
+        "xmlSelfClosingSpace": false,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.{yml,yaml}",
+      "options": {
+        "parser": "yaml",
+        "singleQuote": true,
+        "useTabs": false
+      }
+    },
+    {
+      "files": [".prettier*", "*prettier*js"],
+      "options": {
+        "printWidth": 80,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json",
+        "printWidth": 80,
+        "useTabs": false,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "doc*/**/*.html",
+      "options": {
+        "attributeGroups": ["$CODE_GUIDE"],
+        "htmlWhitespaceSensitivity": "ignore",
+        "parser": "html",
+        "printWidth": 150,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "**/lwc/**/*.html",
+      "options": {
+        "parser": "lwc",
+        "printWidth": 120,
+        "attributeGroups": [
+          "^lwc",
+          "^id$",
+          "^name$",
+          "^src$",
+          "^for$",
+          "^type$",
+          "^href$",
+          "^value$",
+          "^title$",
+          "^alt$",
+          "^role$",
+          "^aria-",
+          "^html-",
+          "$TYPE",
+          "^access$",
+          "^description$",
+          "^class$",
+          "^data-",
+          "$ARIA",
+          "^on"
+        ]
+      }
+    },
+    {
+      "files": "*.json5",
+      "options": { "quoteProps": "consistent", "parser": "json5" }
+    },
+    {
+      "files": "package.json",
+      "options": {
+        "parser": "json-stringify",
+        "singleQuote": false,
+        "printWidth": 80
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-apex",
+    "@prettier/plugin-xml",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-pkg"
+  ]
 }

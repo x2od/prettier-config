@@ -1,11 +1,14 @@
+import x2odPrettierConfig from './index.json' with { type: 'json' };
+
 /**
  * @see https://prettier.io/docs/configuration
  * @type {import("prettier").Config}
  */
-module.exports = {
-	...require('@x2od/prettier-config'),
+const config = {
+	...x2odPrettierConfig,
 	$schema: 'https://json.schemastore.org/prettierrc',
 	overrides: [
+		...x2odPrettierConfig.overrides,
 		{
 			files: 'index.json',
 			options: {
@@ -14,10 +17,12 @@ module.exports = {
 			}
 		},
 		{
-			files: '.prettierrc.js',
+			files: '*prettier*js',
 			options: {
 				singleQuote: true
 			}
 		}
 	]
 };
+
+export default config;
