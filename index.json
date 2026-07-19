@@ -47,7 +47,8 @@
     {
       "files": "*.{cls,trigger}",
       "options": {
-        "parser": "apex"
+        "parser": "apex",
+        "useTabs": false
       }
     },
     {
@@ -59,7 +60,8 @@
     {
       "files": "*.{apex,soql}",
       "options": {
-        "parser": "apex-anonymous"
+        "parser": "apex-anonymous",
+        "useTabs": false
       }
     },
     {
@@ -71,7 +73,7 @@
       }
     },
     {
-      "files": "*meta.xml",
+      "files": "*-meta.xml",
       "options": {
         "parser": "xml",
         "useTabs": false,

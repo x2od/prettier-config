@@ -59,7 +59,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `.{cmp,page,component}` — Salesforce Lightning components
 - `.{cls,trigger}` — Apex classes and triggers
 - `.{apex,soql}` — Apex anonymous and SOQL
-- `*.xml` — XML, with PMD rulesets and `*meta.xml` handled distinctly
+- `*.xml` — XML, with PMD rulesets and `*-meta.xml` handled distinctly
 - `.{yml,yaml}` — YAML files
 - `*.json` / `*.json5` — JSON files (printWidth: 80)
 - `package.json` — sorted via `prettier-plugin-pkg`
