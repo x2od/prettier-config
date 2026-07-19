@@ -2,3 +2,4 @@ node_modules
 CHANGELOG.md
 LICENSE
 package-lock.json
+.claude
