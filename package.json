@@ -41,7 +41,8 @@
     "@prettier/plugin-xml": "^3.4.2",
     "prettier-plugin-apex": "^2.3.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
-    "prettier-plugin-pkg": "^0.22.1"
+    "prettier-plugin-pkg": "^0.22.1",
+    "prettier-plugin-sh": "^0.19.0"
   },
   "devDependencies": {
     "release-please": "^17.10.3"

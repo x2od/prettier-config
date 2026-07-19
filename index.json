@@ -118,6 +118,14 @@
       }
     },
     {
+      "files": "package.json",
+      "options": {
+        "parser": "json-stringify",
+        "singleQuote": false,
+        "printWidth": 80
+      }
+    },
+    {
       "files": "doc*/**/*.html",
       "options": {
         "attributeGroups": ["$CODE_GUIDE"],
@@ -161,11 +169,14 @@
       "options": { "quoteProps": "consistent", "parser": "json5" }
     },
     {
-      "files": "package.json",
+      "files": "*.sh",
       "options": {
-        "parser": "json-stringify",
-        "singleQuote": false,
-        "printWidth": 80
+        "keepComments": true,
+        "useTabs": false,
+        "indent": 2,
+        "switchCaseIndent": true,
+        "spaceRedirects": true,
+        "functionNextLine": false
       }
     }
   ],
@@ -173,6 +184,7 @@
     "prettier-plugin-apex",
     "@prettier/plugin-xml",
     "prettier-plugin-organize-attributes",
-    "prettier-plugin-pkg"
+    "prettier-plugin-pkg",
+    "prettier-plugin-sh"
   ]
 }
