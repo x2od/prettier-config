@@ -28,9 +28,12 @@ Commit and pull-request conventions the user requires in this repo
   new in the change. See [[readme-informational-only]] — the README is
   informational, but it should still be refreshed when a PR introduces new
   behavior worth documenting.
-- When working with a PR, if necessary use `BEGIN_NESTED_COMMIT` /
-  `END_NESTED_COMMIT` blocks (one pair per commit) in the PR description to add
-  additional commits to the release-please changelog.
+- Use `BEGIN_NESTED_COMMIT` / `END_NESTED_COMMIT` blocks (one pair per commit)
+  in the PR description ONLY for changes the PR **title does not already cover**.
+  The title becomes one changelog entry; nested blocks add entries for the
+  *other* commits. If the title already names every change (e.g.
+  "ignore package-lock.json and .claude"), one entry suffices — do NOT add
+  nested commits.
 - **Do NOT hard-wrap paragraphs in PR descriptions.** Write each paragraph as a
   single long line and let GitHub soft-wrap it; do not insert newlines mid-
   paragraph. Keep blank lines between paragraphs, and keep list items / code
