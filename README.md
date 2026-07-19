@@ -66,6 +66,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `.prettierrc*` — Prettier config files (printWidth: 80)
 - `*.md` — Markdown (spaces, not tabs)
 - `.html` — HTML files with custom attribute grouping (`doc*` and LWC templates)
+- `*.sh` — Shell scripts (spaces, `indent: 2`, via `prettier-plugin-sh`)
 
 **Plugins:**
 
@@ -73,6 +74,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `@prettier/plugin-xml` — XML formatting
 - `prettier-plugin-organize-attributes` — HTML attribute organization
 - `prettier-plugin-pkg` — `package.json` field sorting
+- `prettier-plugin-sh` — Shell / Bash script formatting
 
 ## Extending Shared Configurations
 
