@@ -10,10 +10,9 @@ const config = {
 	overrides: [
 		...x2odPrettierConfig.overrides,
 		{
-			files: 'index.json',
+			files: 'package.json',
 			options: {
-				singleQuote: false,
-				printWidth: 80
+				printWidth: 100
 			}
 		},
 		{
