@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.1.0](https://github.com/x2od/prettier-config/compare/v0.0.8...v0.1.0) (2026-07-19)
+
+
+### Features
+
+* **config:** Add prettier-plugin-sh for shell script formatting ([#70](https://github.com/x2od/prettier-config/issues/70)) ([b5147a9](https://github.com/x2od/prettier-config/commit/b5147a94afb740d3466a974396bdd7dd482e2e77))
+* **config:** Format Apex and SOQL with spaces instead of tabs ([52a613f](https://github.com/x2od/prettier-config/commit/52a613f1a873d864bc369dd53fdb75f3ff3a7b55))
+* **config:** Match Salesforce metadata files with *-meta.xml glob ([52a613f](https://github.com/x2od/prettier-config/commit/52a613f1a873d864bc369dd53fdb75f3ff3a7b55))
+
+
+### Bug Fixes
+
+* **release-please:** Deactivate bump patch for minor pre major ([77a1028](https://github.com/x2od/prettier-config/commit/77a10284f565241e806869a20186dba7b15930f9))
+
+
+### Miscellaneous Chores
+
+* **prettier:** Ignore package-lock.json and .claude ([#68](https://github.com/x2od/prettier-config/issues/68)) ([7b8d23f](https://github.com/x2od/prettier-config/commit/7b8d23f96f41fbf3322a466be7dc689047cc0de2))
+* **prettier:** Refine local package.json prettier local override ([#64](https://github.com/x2od/prettier-config/issues/64)) ([17d5333](https://github.com/x2od/prettier-config/commit/17d533316c6bfafb86a8120f9b5cd0609a0214df))
+* **release-please:** Exit prerelease ([55fbd47](https://github.com/x2od/prettier-config/commit/55fbd47f34a590c89fff1128a0f6dd1b2f1b6730))
+* **release-please:** Remove unused deps changelog section ([#65](https://github.com/x2od/prettier-config/issues/65)) ([5a3008d](https://github.com/x2od/prettier-config/commit/5a3008d6aabb99f9371f4756b6ec5dc621d3b677))
+
+
+### Documentation
+
+* **claude:** Add project memory files ([#66](https://github.com/x2od/prettier-config/issues/66)) ([99c873b](https://github.com/x2od/prettier-config/commit/99c873bbfe2d71ee28840372928271ac8384f1eb))
+* **claude:** Scope nested-commit rule to changes not named in the PR title ([#69](https://github.com/x2od/prettier-config/issues/69)) ([a327403](https://github.com/x2od/prettier-config/commit/a327403fc9be7b829b43a2ea5e43325b733b93e5))
+
+
+### Continuous Integration
+
+* **actions/checkout:** Update actions/checkout action from v6.0.3 to v7.0.0 ([#59](https://github.com/x2od/prettier-config/issues/59)) ([af49760](https://github.com/x2od/prettier-config/commit/af49760ee8132769879e00478da75034984a26aa))
+* **actions/setup-node:** Update actions/setup-node action from v6.5.0 to v7.0.0 ([#60](https://github.com/x2od/prettier-config/issues/60)) ([c2de93c](https://github.com/x2od/prettier-config/commit/c2de93c8df02a3d4b524c2b9d64c5fbd35aa5771))
+* **release-please:** Run on every push to main ([cc928c4](https://github.com/x2od/prettier-config/commit/cc928c4f8f9baf083fdd162710a3940cf70eb8de))
+* **release-please:** Serialize runs with a cancel-in-progress concurrency group ([#67](https://github.com/x2od/prettier-config/issues/67)) ([02946a2](https://github.com/x2od/prettier-config/commit/02946a20f03cb8d4a0f5a17d6b36b1472608bc3a))
+* **renovate:** Require manual approval for major prettier updates ([#63](https://github.com/x2od/prettier-config/issues/63)) ([046f66e](https://github.com/x2od/prettier-config/commit/046f66ed2a919d869786d7072a011d6a3c84d489))
+
+
+### Build System
+
+* **@x2od/prettier-config:** Update devdependency @x2od/prettier-config from 0.0.7 to 0.0.8 ([#57](https://github.com/x2od/prettier-config/issues/57)) ([21edfd9](https://github.com/x2od/prettier-config/commit/21edfd98e474376d0892db848c990950883a1fe6))
+* **deps:** Remove self-referential @x2od/prettier-config devDependency ([#61](https://github.com/x2od/prettier-config/issues/61)) ([ff24c61](https://github.com/x2od/prettier-config/commit/ff24c612c9b16ffabc5a7a108fc5fd1aced4b08f))
+
 ## [0.0.8](https://github.com/x2od/prettier-config/compare/v0.0.7...v0.0.8) (2026-07-18)
 
 
