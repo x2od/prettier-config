@@ -1,0 +1,7 @@
+# Keep generated docs in sync (no-op until you configure targets in the script).
+[ -f scripts/update-docs.js ] && node scripts/update-docs.js
+
+# Format only the files being committed (Prettier via lint-staged, which
+# re-stages them). A formatting failure blocks the commit on purpose. The guard
+# just skips gracefully in a no-npm / plain-.git/hooks install.
+[ -f node_modules/.bin/lint-staged ] && npm run lint-staged
