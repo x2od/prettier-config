@@ -1,0 +1,35 @@
+name: prettier
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One formatting check per ref is enough; a newer push cancels any run already
+# in progress for the same branch.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      - name: Install Dependencies
+        run: npm ci
+      # Backstop for the pre-commit hook: catches anything committed with
+      # --no-verify, edited through the GitHub web UI, or merged without the
+      # hook having run. Prints the offending files and exits non-zero.
+      - name: Verify formatting
+        run: npm run prettier:verify

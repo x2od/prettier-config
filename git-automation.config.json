@@ -1,0 +1,16 @@
+{
+  "repoUrl": null,
+  "commitTypes": [
+    "feat",
+    "fix",
+    "test",
+    "chore",
+    "perf",
+    "refactor",
+    "style",
+    "docs",
+    "revert",
+    "ci",
+    "build"
+  ]
+}

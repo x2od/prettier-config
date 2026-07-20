@@ -23,8 +23,10 @@
   ],
   "scripts": {
     "changelog:preview": "release-please release-pr --repo-url=x2od/prettier-config --target-branch=$(git branch --show-current) --dry-run --token=$(gh auth token)",
+    "lint-staged": "lint-staged",
     "minor": "npm version minor",
     "patch": "npm version patch",
+    "prepare": "husky",
     "prettier": "prettier --write .",
     "prettier:verify": "prettier --list-different .",
     "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
@@ -45,7 +47,12 @@
     "prettier-plugin-sh": "^0.19.0"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.1.0",
     "prettier": "^3.9.5",
     "release-please": "^17.10.3"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
   }
 }
