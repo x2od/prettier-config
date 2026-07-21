@@ -29,6 +29,7 @@
     "prepare": "husky",
     "prettier": "prettier --write .",
     "prettier:verify": "prettier --list-different .",
+    "prune": "git checkout main && git branch --merged | grep -v '^\\*\\|main' | xargs -r git branch -d",
     "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
   },
   "peerDependencies": {
