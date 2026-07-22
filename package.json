@@ -51,7 +51,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.1.0",
     "prettier": "^3.9.5",
-    "release-please": "^17.10.3"
+    "release-please": "^17.10.4"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
