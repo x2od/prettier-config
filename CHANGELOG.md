@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.1.1](https://github.com/x2od/prettier-config/compare/v0.1.0...v0.1.1) (2026-09-10)
+
+
+### 🔧 Miscellaneous Chores
+
+* **release-please:** Add emoji to changelog section headers ([#74](https://github.com/x2od/prettier-config/issues/74)) ([59389df](https://github.com/x2od/prettier-config/commit/59389dfa8cdc7009df5846109fa144c6865d7da1))
+* **scripts:** Add prune command to switch to main and delete merged branches ([748685a](https://github.com/x2od/prettier-config/commit/748685ad1a6128954d75d0bc3e902d5693c92e49))
+
+
+### 🎨 Styles
+
+* **prettier:** Add trailing newline to .prettierignore ([8aef505](https://github.com/x2od/prettier-config/commit/8aef5059d0362dbbad4f6cebbccd89f660b995c2))
+
+
+### 👷 Continuous Integration
+
+* **husky:** Add pre-commit prettier hook and commit-msg linter ([#72](https://github.com/x2od/prettier-config/issues/72)) ([97cffaa](https://github.com/x2od/prettier-config/commit/97cffaa39e9c77c883aa433829429bc67686e191))
+* **prettier:** Add workflow verifying formatting on pull requests ([97cffaa](https://github.com/x2od/prettier-config/commit/97cffaa39e9c77c883aa433829429bc67686e191))
+* **renovate:** Prevent automerge of prettier packages ([8aef505](https://github.com/x2od/prettier-config/commit/8aef5059d0362dbbad4f6cebbccd89f660b995c2))
+
+
+### 📦 Build System
+
+* **lint-staged:** Update devdependency lint-staged from 17.1.0 to 17.1.1 ([#77](https://github.com/x2od/prettier-config/issues/77)) ([578bd71](https://github.com/x2od/prettier-config/commit/578bd714d4b0f5a27525af53b492411b66aa67a4))
+* **lint-staged:** Update devdependency lint-staged from 17.1.1 to 17.2.0 ([#78](https://github.com/x2od/prettier-config/issues/78)) ([8aebf80](https://github.com/x2od/prettier-config/commit/8aebf80dd6bfc1db770bb2477bd94e4bf09931dc))
+* **lint-staged:** Update devdependency lint-staged from 17.2.0 to 17.3.0 ([#80](https://github.com/x2od/prettier-config/issues/80)) ([db701bd](https://github.com/x2od/prettier-config/commit/db701bd3f06fc030d3cb19852fe934b93f819b34))
+* **lint-staged:** Update devdependency lint-staged from 17.3.0 to 17.4.1 ([#83](https://github.com/x2od/prettier-config/issues/83)) ([871c682](https://github.com/x2od/prettier-config/commit/871c6822345f12c78f1a0245d79ff6cc3532b3bb))
+* **lint-staged:** Update devdependency lint-staged from 17.4.1 to 17.5.0 ([#84](https://github.com/x2od/prettier-config/issues/84)) ([e28182f](https://github.com/x2od/prettier-config/commit/e28182f749a3c151024552b1b96aca4b0541bdff))
+* **lint-staged:** Update devdependency lint-staged from 17.5.0 to 17.5.1 ([#85](https://github.com/x2od/prettier-config/issues/85)) ([29cf6b4](https://github.com/x2od/prettier-config/commit/29cf6b4ff02f14f16bf16fe570464a6c55dc50e4))
+* **prettier:** Add prettier as a devDependency ([#71](https://github.com/x2od/prettier-config/issues/71)) ([8aef505](https://github.com/x2od/prettier-config/commit/8aef5059d0362dbbad4f6cebbccd89f660b995c2))
+* **release-please:** Update devdependency release-please from 17.10.3 to 17.10.4 ([#76](https://github.com/x2od/prettier-config/issues/76)) ([b9dd75d](https://github.com/x2od/prettier-config/commit/b9dd75dda2f021d7a2c2bd7d3f5cf19387c1ad32))
+* **release-please:** Update devdependency release-please from 17.10.4 to 17.11.0 ([#79](https://github.com/x2od/prettier-config/issues/79)) ([9dad1cb](https://github.com/x2od/prettier-config/commit/9dad1cb67643a887e1200e235548679006e16aa0))
+* **release-please:** Update devdependency release-please from 17.11.0 to 17.11.1 ([#81](https://github.com/x2od/prettier-config/issues/81)) ([2bc953d](https://github.com/x2od/prettier-config/commit/2bc953dd05723e4cd9bd08ce27c619e3e26b8534))
+* **release-please:** Update devdependency release-please from 17.11.1 to 17.11.2 ([#82](https://github.com/x2od/prettier-config/issues/82)) ([f7fd449](https://github.com/x2od/prettier-config/commit/f7fd44907358fca5caca4021692b034c5f50be9f))
+
 ## [0.1.0](https://github.com/x2od/prettier-config/compare/v0.0.8...v0.1.0) (2026-07-19)
 
 
