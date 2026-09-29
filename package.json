@@ -45,7 +45,7 @@
     "prettier-plugin-apex": "^2.3.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-pkg": "^0.22.1",
-    "prettier-plugin-sh": "^0.19.0"
+    "prettier-plugin-sh": "^0.20.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",
