@@ -56,7 +56,8 @@ This config includes sensible defaults optimized for Salesforce development and 
 
 **File-specific overrides** are included for:
 
-- `.{app,auradoc,cmp,component,design,evt,intf,page,tokens}` — Aura bundle files and Visualforce pages/components
+- `.{cmp,component,page,app,auradoc,design,evt,intf,tokens}` — Aura bundle files and Visualforce pages/components
+  - `.{auradoc,design,evt,intf,tokens}` also use whitespace-insensitive formatting, because these files never render as a page. Components, pages and apps keep Prettier's default whitespace handling, so inline text such as `Hello <b>{!name}</b>,` never gains a visible space.
 - `.{cls,trigger}` — Apex classes and triggers (tabs; triggers use printWidth: 200)
 - `*.apex` — Anonymous Apex (tabs)
 - `*.xml` — XML, with PMD rulesets handled distinctly; Salesforce metadata (`*-meta.xml`) and manifests (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) use 4-space indentation to match Salesforce output
@@ -65,7 +66,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `package.json` — sorted via `prettier-plugin-pkg`
 - `.prettierrc*` — Prettier config files (printWidth: 80)
 - `*.md` — Markdown (spaces, not tabs)
-- `.html` — HTML files: `doc*` with custom attribute grouping; LWC templates with the `lwc` parser and whitespace-insensitive formatting
+- `.html` — HTML files: `doc*` with custom attribute grouping; LWC templates with the `lwc` parser
 - `*.sh` — Shell scripts (spaces, `indent: 2`, via `prettier-plugin-sh`)
 
 > [!NOTE]
@@ -105,9 +106,8 @@ node_modules/
 The first `prettier --write` after upgrading to 0.2.0 will reformat many files in your project:
 
 - **Apex** (`*.cls`, `*.trigger`, `*.apex`) switches from spaces to tabs, so every Apex file changes.
-- **Aura bundle files** (`*.app`, `*.auradoc`, `*.design`, `*.evt`, `*.intf`, `*.tokens`) are formatted for the first time.
+- **Aura bundle files** (`*.app`, `*.auradoc`, `*.design`, `*.evt`, `*.intf`, `*.tokens`) are formatted for the first time. Apps use Prettier's default whitespace handling, like components; the other five use whitespace-insensitive formatting, which nests one tag per line.
 - **Manifests** (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) switch from tabs to 4-space indentation, matching Salesforce metadata files.
-- **LWC templates** (`**/lwc/**/*.html`) are reflowed with whitespace-insensitive formatting, which removes the awkward `><` line breaks.
 - **SOQL files** (`*.soql`) are no longer matched by any override. Add `*.soql` to your `.prettierignore` (see above), or `prettier --check` will report errors for them.
 
 To keep this reformat out of `git blame`:
