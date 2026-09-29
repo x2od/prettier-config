@@ -14,7 +14,7 @@
   "xmlSelfClosingSpace": true,
   "overrides": [
     {
-      "files": "*.{cmp,page,component}",
+      "files": "*.{app,auradoc,cmp,component,design,evt,intf,page,tokens}",
       "options": {
         "attributeGroups": [
           "^id$",
@@ -48,7 +48,7 @@
       "files": "*.{cls,trigger}",
       "options": {
         "parser": "apex",
-        "useTabs": false
+        "useTabs": true
       }
     },
     {
@@ -58,10 +58,10 @@
       }
     },
     {
-      "files": "*.{apex,soql}",
+      "files": "*.apex",
       "options": {
         "parser": "apex-anonymous",
-        "useTabs": false
+        "useTabs": true
       }
     },
     {
@@ -73,7 +73,12 @@
       }
     },
     {
-      "files": "*-meta.xml",
+      "files": [
+        "*-meta.xml",
+        "manifest/*.xml",
+        "package.xml",
+        "destructiveChanges*.xml"
+      ],
       "options": {
         "parser": "xml",
         "useTabs": false,
@@ -140,28 +145,7 @@
       "options": {
         "parser": "lwc",
         "printWidth": 120,
-        "attributeGroups": [
-          "^lwc",
-          "^id$",
-          "^name$",
-          "^src$",
-          "^for$",
-          "^type$",
-          "^href$",
-          "^value$",
-          "^title$",
-          "^alt$",
-          "^role$",
-          "^aria-",
-          "^html-",
-          "$TYPE",
-          "^access$",
-          "^description$",
-          "^class$",
-          "^data-",
-          "$ARIA",
-          "^on"
-        ]
+        "htmlWhitespaceSensitivity": "ignore"
       }
     },
     {
