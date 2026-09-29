@@ -35,7 +35,7 @@ module.exports = '@x2od/prettier-config';
 **Via `prettier.config.mjs`, or `.prettierrc.mjs`:**
 
 ```js
-import x2odPrettierConfig from '@x2od/prettier-config';
+import x2odPrettierConfig from '@x2od/prettier-config' with { type: 'json' };
 export default x2odPrettierConfig;
 ```
 
@@ -56,17 +56,20 @@ This config includes sensible defaults optimized for Salesforce development and 
 
 **File-specific overrides** are included for:
 
-- `.{cmp,page,component}` — Salesforce Lightning components
-- `.{cls,trigger}` — Apex classes and triggers
-- `.{apex,soql}` — Apex anonymous and SOQL
-- `*.xml` — XML, with PMD rulesets and `*-meta.xml` handled distinctly
+- `.{app,auradoc,cmp,component,design,evt,intf,page,tokens}` — Aura bundle files and Visualforce pages/components
+- `.{cls,trigger}` — Apex classes and triggers (tabs; triggers use printWidth: 200)
+- `*.apex` — Anonymous Apex (tabs)
+- `*.xml` — XML, with PMD rulesets handled distinctly; Salesforce metadata (`*-meta.xml`) and manifests (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) use 4-space indentation to match Salesforce output
 - `.{yml,yaml}` — YAML files
 - `*.json` / `*.json5` — JSON files (printWidth: 80)
 - `package.json` — sorted via `prettier-plugin-pkg`
 - `.prettierrc*` — Prettier config files (printWidth: 80)
 - `*.md` — Markdown (spaces, not tabs)
-- `.html` — HTML files with custom attribute grouping (`doc*` and LWC templates)
+- `.html` — HTML files: `doc*` with custom attribute grouping; LWC templates with the `lwc` parser and whitespace-insensitive formatting
 - `*.sh` — Shell scripts (spaces, `indent: 2`, via `prettier-plugin-sh`)
+
+> [!NOTE]
+> Standalone SOQL files (`*.soql`) are not formatted. No Prettier plugin parses bare SOQL, so add them to your `.prettierignore` (see below).
 
 **Plugins:**
 
@@ -75,6 +78,49 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `prettier-plugin-organize-attributes` — HTML attribute organization
 - `prettier-plugin-pkg` — `package.json` field sorting
 - `prettier-plugin-sh` — Shell / Bash script formatting
+
+## Recommended `.prettierignore`
+
+Prettier won't format these, or shouldn't, in a Salesforce project. Start with this list and add project-specific paths:
+
+```gitignore
+# Salesforce CLI state
+.sf/
+.sfdx/
+.localdevserver/
+
+# Static resources are often minified or vendored
+**/staticresources/**
+
+# No Prettier parser for standalone SOQL
+*.soql
+
+# Build and test output
+coverage/
+node_modules/
+```
+
+## Upgrading to 0.2.0
+
+The first `prettier --write` after upgrading to 0.2.0 will reformat many files in your project:
+
+- **Apex** (`*.cls`, `*.trigger`, `*.apex`) switches from spaces to tabs, so every Apex file changes.
+- **Aura bundle files** (`*.app`, `*.auradoc`, `*.design`, `*.evt`, `*.intf`, `*.tokens`) are formatted for the first time.
+- **Manifests** (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) switch from tabs to 4-space indentation, matching Salesforce metadata files.
+- **LWC templates** (`**/lwc/**/*.html`) are reflowed with whitespace-insensitive formatting, which removes the awkward `><` line breaks.
+- **SOQL files** (`*.soql`) are no longer matched by any override. Add `*.soql` to your `.prettierignore` (see above), or `prettier --check` will report errors for them.
+
+To keep this reformat out of `git blame`:
+
+1. Upgrade the package, run `prettier --write .`, and commit the result on its own, with no other changes.
+2. Add that commit's full SHA to a `.git-blame-ignore-revs` file in the repository root:
+
+   ```text
+   # Reformat for @x2od/prettier-config 0.2.0
+   <full commit SHA>
+   ```
+
+3. Run `git config blame.ignoreRevsFile .git-blame-ignore-revs` locally. GitHub reads this file automatically in its blame view.
 
 ## Extending Shared Configurations
 
@@ -105,18 +151,17 @@ module.exports = {
   overrides: [
     ...x2odPrettierConfig.overrides,
     {
-      files: '*.sh',
+      files: '*.toml',
       options: {
-        parser: 'sh',
         useTabs: false
       }
     }
   ],
-  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
+  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-toml']
 };
 ```
 
-You can also inline the `require()` call:
+If you only need to change top-level options, you can inline the `require()` call:
 
 ```javascript
 // prettier.config.js
@@ -126,23 +171,12 @@ You can also inline the `require()` call:
  */
 module.exports = {
   ...require('@x2od/prettier-config'),
-  overrides: [
-    {
-      files: 'index.json',
-      options: {
-        singleQuote: false,
-        printWidth: 80
-      }
-    },
-    {
-      files: '.prettierrc.js',
-      options: {
-        singleQuote: true
-      }
-    }
-  ]
+  printWidth: 120
 };
 ```
+
+> [!WARNING]
+> Don't set `overrides` or `plugins` in the inline form. A key you set replaces the package's value entirely instead of adding to it, so you would lose every built-in override (Apex, XML, LWC, and so on) or plugin. To add overrides or plugins, use the form above and spread `...x2odPrettierConfig.overrides` and `...x2odPrettierConfig.plugins`.
 
 **With ES modules (`.mjs`):**
 
@@ -163,19 +197,19 @@ const config = {
   overrides: [
     ...x2odPrettierConfig.overrides,
     {
-      files: '*.sh',
+      files: '*.toml',
       options: {
-        parser: 'sh'
+        useTabs: false
       }
     }
   ],
-  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-sh']
+  plugins: [...x2odPrettierConfig.plugins, 'prettier-plugin-toml']
 };
 
 export default config;
 ```
 
-Note that additional plugins must be added as devDependencies in the project.
+Note that additional plugins must be added as devDependencies in the project (for example, `npm install --save-dev prettier-plugin-toml`).
 
 ## Configuration Considerations
 
