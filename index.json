@@ -14,7 +14,7 @@
   "xmlSelfClosingSpace": true,
   "overrides": [
     {
-      "files": "*.{app,auradoc,cmp,component,design,evt,intf,page,tokens}",
+      "files": "*.{cmp,component,page,app,auradoc,design,evt,intf,tokens}",
       "options": {
         "attributeGroups": [
           "^id$",
@@ -42,6 +42,12 @@
         "attributeIgnoreCase": true,
         "parser": "html",
         "singleQuote": false
+      }
+    },
+    {
+      "files": "*.{auradoc,design,evt,intf,tokens}",
+      "options": {
+        "htmlWhitespaceSensitivity": "ignore"
       }
     },
     {
@@ -144,8 +150,7 @@
       "files": "**/lwc/**/*.html",
       "options": {
         "parser": "lwc",
-        "printWidth": 120,
-        "htmlWhitespaceSensitivity": "ignore"
+        "printWidth": 120
       }
     },
     {
