@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/x2od/prettier-config/compare/v0.2.0...v0.3.0) (2026-10-09)
+
+
+### ✨ Features
+
+* **config:** Incorporate Claude suggestions from DevSecOps project ([#90](https://github.com/x2od/prettier-config/issues/90)) ([14df70f](https://github.com/x2od/prettier-config/commit/14df70fdc9120bf2ad39a4b65e0fbcc2deea31f5))
+
+
+### 📦 Build System
+
+* **prettier-plugin-sh:** Update dependency prettier-plugin-sh from 0.20.0 to 0.20.2 ([#91](https://github.com/x2od/prettier-config/issues/91)) ([066c49f](https://github.com/x2od/prettier-config/commit/066c49f212b0d3ef5fcb75ce2b6bd1e254bb82e3))
+
 ## [0.2.0](https://github.com/x2od/prettier-config/compare/v0.1.0...v0.2.0) (2026-09-29)
 
 
