@@ -45,6 +45,12 @@
       }
     },
     {
+      "files": "*.{page,component}",
+      "options": {
+        "htmlWhitespaceSensitivity": "css"
+      }
+    },
+    {
       "files": "*.{auradoc,design,evt,intf,tokens}",
       "options": {
         "htmlWhitespaceSensitivity": "ignore"
@@ -71,7 +77,7 @@
       }
     },
     {
-      "files": ["**/pmd/*.xml", "ruleset.xml", "pmd*.xml"],
+      "files": "*.xml",
       "options": {
         "parser": "xml",
         "xmlSelfClosingSpace": true,
@@ -86,10 +92,10 @@
         "destructiveChanges*.xml"
       ],
       "options": {
-        "parser": "xml",
         "useTabs": false,
         "xmlSelfClosingSpace": false,
-        "tabWidth": 4
+        "tabWidth": 4,
+        "embeddedLanguageFormatting": "off"
       }
     },
     {
@@ -110,7 +116,7 @@
     {
       "files": "*.css",
       "options": {
-        "useTabs": false
+        "useTabs": true
       }
     },
     {
@@ -140,7 +146,7 @@
       "files": "doc*/**/*.html",
       "options": {
         "attributeGroups": ["$CODE_GUIDE"],
-        "htmlWhitespaceSensitivity": "ignore",
+        "htmlWhitespaceSensitivity": "css",
         "parser": "html",
         "printWidth": 150,
         "singleQuote": false
