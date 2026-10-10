@@ -48,8 +48,8 @@
     {
       "files": "*.{cmp,page,component}",
       "options": {
-        "useTabs": true,
-        "htmlWhitespaceSensitivity": "css"
+        "htmlWhitespaceSensitivity": "css",
+        "useTabs": true
       }
     },
     {
@@ -82,6 +82,8 @@
       "files": "*.xml",
       "options": {
         "parser": "xml",
+        "singleQuote": false,
+        "useTabs": true,
         "xmlSelfClosingSpace": true,
         "xmlWhitespaceSensitivity": "preserve"
       }
@@ -94,10 +96,12 @@
         "destructiveChanges*.xml"
       ],
       "options": {
+        "parser": "xml",
         "embeddedLanguageFormatting": "off",
         "tabWidth": 4,
         "useTabs": false,
-        "xmlSelfClosingSpace": false
+        "xmlSelfClosingSpace": false,
+        "xmlWhitespaceSensitivity": "strict"
       }
     },
     {
@@ -105,6 +109,7 @@
       "options": {
         "parser": "yaml",
         "singleQuote": true,
+        "tabWidth": 2,
         "useTabs": false
       }
     },
@@ -137,11 +142,13 @@
       }
     },
     {
+      "files": "*.json5",
+      "options": { "parser": "json5", "quoteProps": "consistent" }
+    },
+    {
       "files": "package.json",
       "options": {
-        "parser": "json-stringify",
-        "printWidth": 80,
-        "singleQuote": false
+        "parser": "json-stringify"
       }
     },
     {
@@ -151,7 +158,9 @@
         "attributeGroups": ["$CODE_GUIDE"],
         "htmlWhitespaceSensitivity": "css",
         "printWidth": 150,
-        "singleQuote": false
+        "singleQuote": false,
+        "tabWidth": 2,
+        "useTabs": true
       }
     },
     {
@@ -160,10 +169,6 @@
         "parser": "lwc",
         "printWidth": 120
       }
-    },
-    {
-      "files": "*.json5",
-      "options": { "parser": "json5", "quoteProps": "consistent" }
     },
     {
       "files": "*.sh",
