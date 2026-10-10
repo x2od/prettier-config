@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.1](https://github.com/x2od/prettier-config/compare/v0.3.0...v0.3.1) (2026-10-10)
+
+
+### 🔧 Miscellaneous Chores
+
+* **renovate:** Disable dependency dashboard approval ([bf8df0e](https://github.com/x2od/prettier-config/commit/bf8df0e9b6ea8254aca9da3917b4185353717769))
+
+
+### ♻️ Code Refactoring
+
+* **config:** Merge with config from other projects, alphabetize again ([23b70c1](https://github.com/x2od/prettier-config/commit/23b70c14b231ed38330cec2545306468849ccc1e))
+* **config:** Organize prettier configuration options ([#94](https://github.com/x2od/prettier-config/issues/94)) ([2fec63f](https://github.com/x2od/prettier-config/commit/2fec63fe6708a34578f42339d61b01f1d94ac415))
+
+
+### 📦 Build System
+
+* **prettier:** Update devdependency prettier from 3.9.9 to 3.9.10 ([#93](https://github.com/x2od/prettier-config/issues/93)) ([a5804e0](https://github.com/x2od/prettier-config/commit/a5804e05c6cf5d7bf0aa57e3d7c98b4d11033c8e))
+
 ## [0.3.0](https://github.com/x2od/prettier-config/compare/v0.2.0...v0.3.0) (2026-10-09)
 
 
