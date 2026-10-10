@@ -16,6 +16,7 @@
     {
       "files": "*.{cmp,component,page,app,auradoc,design,evt,intf,tokens}",
       "options": {
+        "parser": "html",
         "attributeGroups": [
           "^id$",
           "^aura:id$",
@@ -40,13 +41,14 @@
           "^on"
         ],
         "attributeIgnoreCase": true,
-        "parser": "html",
-        "singleQuote": false
+        "singleQuote": false,
+        "useTabs": false
       }
     },
     {
-      "files": "*.{page,component}",
+      "files": "*.{cmp,page,component}",
       "options": {
+        "useTabs": true,
         "htmlWhitespaceSensitivity": "css"
       }
     },
@@ -92,10 +94,10 @@
         "destructiveChanges*.xml"
       ],
       "options": {
-        "useTabs": false,
-        "xmlSelfClosingSpace": false,
+        "embeddedLanguageFormatting": "off",
         "tabWidth": 4,
-        "embeddedLanguageFormatting": "off"
+        "useTabs": false,
+        "xmlSelfClosingSpace": false
       }
     },
     {
@@ -130,24 +132,24 @@
       "options": {
         "parser": "json",
         "printWidth": 80,
-        "useTabs": false,
-        "singleQuote": false
+        "singleQuote": false,
+        "useTabs": false
       }
     },
     {
       "files": "package.json",
       "options": {
         "parser": "json-stringify",
-        "singleQuote": false,
-        "printWidth": 80
+        "printWidth": 80,
+        "singleQuote": false
       }
     },
     {
       "files": "doc*/**/*.html",
       "options": {
+        "parser": "html",
         "attributeGroups": ["$CODE_GUIDE"],
         "htmlWhitespaceSensitivity": "css",
-        "parser": "html",
         "printWidth": 150,
         "singleQuote": false
       }
@@ -161,17 +163,17 @@
     },
     {
       "files": "*.json5",
-      "options": { "quoteProps": "consistent", "parser": "json5" }
+      "options": { "parser": "json5", "quoteProps": "consistent" }
     },
     {
       "files": "*.sh",
       "options": {
-        "keepComments": true,
-        "useTabs": false,
+        "functionNextLine": false,
         "indent": 2,
-        "switchCaseIndent": true,
+        "keepComments": true,
         "spaceRedirects": true,
-        "functionNextLine": false
+        "switchCaseIndent": true,
+        "useTabs": false
       }
     }
   ],
