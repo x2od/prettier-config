@@ -35,6 +35,7 @@
     { "type": "docs", "section": "📝 Documentation", "hidden": false },
     { "type": "revert", "section": "⏪ Reverts", "hidden": false },
     { "type": "ci", "section": "👷 Continuous Integration", "hidden": false },
-    { "type": "build", "section": "📦 Build System", "hidden": false }
+    { "type": "build", "section": "📦 Build System", "hidden": false },
+    { "type": "deps", "section": "⬆️ Dependencies", "hidden": false }
   ]
 }
