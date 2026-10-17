@@ -7,11 +7,12 @@
   "experimentalTernaries": true,
   "printWidth": 180,
   "singleAttributePerLine": false,
-  "singleQuote": true,
+  "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "none",
   "useTabs": true,
   "xmlSelfClosingSpace": true,
+  "xmlWhitespaceSensitivity": "preserve",
   "overrides": [
     {
       "files": "*.{cmp,component,page,app,auradoc,design,evt,intf,tokens}",
@@ -41,6 +42,7 @@
           "^on"
         ],
         "attributeIgnoreCase": true,
+        "htmlWhitespaceSensitivity": "css",
         "singleQuote": false,
         "useTabs": false
       }
@@ -55,26 +57,54 @@
     {
       "files": "*.{auradoc,design,evt,intf,tokens}",
       "options": {
-        "htmlWhitespaceSensitivity": "ignore"
+        "htmlWhitespaceSensitivity": "css",
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.java",
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.{c,cpp,cs}",
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.csv",
+      "options": {
+        "singleQuote": false
       }
     },
     {
       "files": "*.{cls,trigger}",
       "options": {
         "parser": "apex",
+        "singleQuote": true,
         "useTabs": true
       }
     },
     {
       "files": "*.trigger",
       "options": {
-        "printWidth": 200
+        "printWidth": 200,
+        "singleQuote": true
       }
     },
     {
       "files": "*.apex",
       "options": {
         "parser": "apex-anonymous",
+        "singleQuote": true,
         "useTabs": true
       }
     },
@@ -101,7 +131,7 @@
         "tabWidth": 4,
         "useTabs": false,
         "xmlSelfClosingSpace": false,
-        "xmlWhitespaceSensitivity": "strict"
+        "xmlWhitespaceSensitivity": "preserve"
       }
     },
     {
@@ -143,12 +173,17 @@
     },
     {
       "files": "*.json5",
-      "options": { "parser": "json5", "quoteProps": "consistent" }
+      "options": {
+        "parser": "json5",
+        "quoteProps": "consistent",
+        "singleQuote": false
+      }
     },
     {
       "files": "package.json",
       "options": {
-        "parser": "json-stringify"
+        "parser": "json-stringify",
+        "singleQuote": false
       }
     },
     {
@@ -176,6 +211,7 @@
         "functionNextLine": false,
         "indent": 2,
         "keepComments": true,
+        "singleQuote": false,
         "spaceRedirects": true,
         "switchCaseIndent": true,
         "useTabs": false
