@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.4.0](https://github.com/x2od/prettier-config/compare/v0.3.1...v0.4.0) (2026-10-17)
+
+
+### ✨ Features
+
+* **aura:** Use css whitespace sensitivity for auradoc-family files ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **config:** Refine per-language formatting overrides ([#96](https://github.com/x2od/prettier-config/issues/96)) ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **config:** Set singleQuote explicitly in every override ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **javascript:** Use single quotes for JavaScript and TypeScript ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **json:** Set printWidth to 180 for package.json ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **json:** Split JSON overrides and set quoteProps to preserve ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **xml:** Correct xmlWhitespaceSensitivity key spelling ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+* **xml:** Set printWidth to 120 for XML and 180 for metadata XML ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+
+
+### 📝 Documentation
+
+* **readme:** Mark code examples with prettier-ignore ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+
+
+### 📦 Build System
+
+* **release please:** Add deps changelog section ([86b73c2](https://github.com/x2od/prettier-config/commit/86b73c248d10b951be201e65c00d5ab10483970f))
+
 ## [0.3.1](https://github.com/x2od/prettier-config/compare/v0.3.0...v0.3.1) (2026-10-10)
 
 
