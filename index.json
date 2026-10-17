@@ -3,6 +3,7 @@
   "apexInsertFinalNewline": false,
   "bracketSameLine": true,
   "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
   "endOfLine": "lf",
   "experimentalTernaries": true,
   "printWidth": 180,
@@ -51,6 +52,7 @@
       "files": "*.{cmp,page,component}",
       "options": {
         "htmlWhitespaceSensitivity": "css",
+        "singleQuote": false,
         "useTabs": true
       }
     },
@@ -58,33 +60,11 @@
       "files": "*.{auradoc,design,evt,intf,tokens}",
       "options": {
         "htmlWhitespaceSensitivity": "css",
+        "singleQuote": false,
         "useTabs": false
       }
     },
-    {
-      "files": "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-      "options": {
-        "singleQuote": true
-      }
-    },
-    {
-      "files": "*.java",
-      "options": {
-        "singleQuote": false
-      }
-    },
-    {
-      "files": "*.{c,cpp,cs}",
-      "options": {
-        "singleQuote": false
-      }
-    },
-    {
-      "files": "*.csv",
-      "options": {
-        "singleQuote": false
-      }
-    },
+
     {
       "files": "*.{cls,trigger}",
       "options": {
@@ -112,6 +92,7 @@
       "files": "*.xml",
       "options": {
         "parser": "xml",
+        "printWidth": 120,
         "singleQuote": false,
         "useTabs": true,
         "xmlSelfClosingSpace": true,
@@ -128,6 +109,8 @@
       "options": {
         "parser": "xml",
         "embeddedLanguageFormatting": "off",
+        "printWidth": 180,
+        "singleQuote": false,
         "tabWidth": 4,
         "useTabs": false,
         "xmlSelfClosingSpace": false,
@@ -153,37 +136,44 @@
     {
       "files": "*.css",
       "options": {
+        "singleQuote": false,
         "useTabs": true
       }
     },
     {
       "files": "*.md",
       "options": {
-        "useTabs": false
-      }
-    },
-    {
-      "files": "*.json",
-      "options": {
-        "parser": "json",
-        "printWidth": 80,
         "singleQuote": false,
         "useTabs": false
       }
     },
     {
+      "files": "*.json*",
+      "options": {
+        "printWidth": 80,
+        "singleQuote": false,
+        "useTabs": false,
+        "quoteProps": "preserve"
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
       "files": "*.json5",
       "options": {
-        "parser": "json5",
-        "quoteProps": "consistent",
-        "singleQuote": false
+        "parser": "json5"
       }
     },
     {
       "files": "package.json",
       "options": {
         "parser": "json-stringify",
-        "singleQuote": false
+        "singleQuote": false,
+        "printWidth": 180
       }
     },
     {
@@ -202,7 +192,14 @@
       "files": "**/lwc/**/*.html",
       "options": {
         "parser": "lwc",
-        "printWidth": 120
+        "printWidth": 120,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+      "options": {
+        "singleQuote": true
       }
     },
     {

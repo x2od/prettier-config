@@ -16,7 +16,7 @@ const config = {
 			}
 		},
 		{
-			files: '*prettier*js',
+			files: '*.{js,mjs}',
 			options: {
 				singleQuote: true
 			}

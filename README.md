@@ -14,6 +14,7 @@ Prettier supports multiple ways to reference this config in a project. Choose on
 
 **Via `package.json`:**
 
+<!-- prettier-ignore -->
 ```json
 {
   "prettier": "@x2od/prettier-config"
@@ -22,18 +23,21 @@ Prettier supports multiple ways to reference this config in a project. Choose on
 
 **Via `.prettierrc` (JSON or YAML):**
 
+<!-- prettier-ignore -->
 ```json
 "@x2od/prettier-config"
 ```
 
 **Via `prettier.config.js` or `.prettierrc.js`:**
 
+<!-- prettier-ignore -->
 ```js
 module.exports = '@x2od/prettier-config';
 ```
 
 **Via `prettier.config.mjs`, or `.prettierrc.mjs`:**
 
+<!-- prettier-ignore -->
 ```js
 import x2odPrettierConfig from '@x2od/prettier-config' with { type: 'json' };
 export default x2odPrettierConfig;
@@ -137,6 +141,7 @@ To extend the configuration, import/require it in a JavaScript config file and e
 
 **With CommonJS (`.js`):**
 
+<!-- prettier-ignore -->
 ```javascript
 // prettier.config.js or .prettierrc.js
 const x2odPrettierConfig = require('@x2od/prettier-config');
@@ -163,6 +168,7 @@ module.exports = {
 
 If you only need to change top-level options, you can inline the `require()` call:
 
+<!-- prettier-ignore -->
 ```javascript
 // prettier.config.js
 /**
@@ -180,6 +186,7 @@ module.exports = {
 
 **With ES modules (`.mjs`):**
 
+<!-- prettier-ignore -->
 ```javascript
 // .prettierrc.mjs or prettier.config.mjs ESM
 import x2odPrettierConfig from '@x2od/prettier-config' with { type: 'json' };
@@ -215,6 +222,7 @@ Note that additional plugins must be added as devDependencies in the project (fo
 
 When adding overrides, prefer a single string pattern with curly-brace alternation for extensions that share a stem:
 
+<!-- prettier-ignore -->
 ```json
 {
   "files": "*.{yaml,yml}",
