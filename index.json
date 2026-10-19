@@ -151,15 +151,16 @@
       "files": "*.json*",
       "options": {
         "printWidth": 80,
+        "quoteProps": "consistent",
         "singleQuote": false,
-        "useTabs": false,
-        "quoteProps": "preserve"
+        "useTabs": false
       }
     },
     {
       "files": "*.json",
       "options": {
         "parser": "json",
+        "quoteProps": "consistent",
         "singleQuote": false
       }
     },
@@ -167,6 +168,7 @@
       "files": "*.json5",
       "options": {
         "parser": "json5",
+        "quoteProps": "consistent",
         "singleQuote": false
       }
     },
