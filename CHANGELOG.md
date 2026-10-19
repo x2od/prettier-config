@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.2](https://github.com/x2od/prettier-config/compare/v0.4.1...v0.4.2) (2026-10-19)
+
+
+### 🐛 Bug Fixes
+
+* **json:** Set quoteProps to consistent ([1f74bcf](https://github.com/x2od/prettier-config/commit/1f74bcf2e88c70358e48b0d8c837cbcf696225c7))
+
+
+### 📦 Build System
+
+* **deps-dev:** Bump @xmldom/xmldom from 0.8.13 to 0.8.15 ([#103](https://github.com/x2od/prettier-config/issues/103)) ([d37c844](https://github.com/x2od/prettier-config/commit/d37c8449b477a6391dd575d705f7fc4f9d54a558))
+* **deps-dev:** Bump js-yaml from 4.3.1 to 4.3.2 ([#104](https://github.com/x2od/prettier-config/issues/104)) ([7a1f19c](https://github.com/x2od/prettier-config/commit/7a1f19c707e385700f0cf0e4e2f5724a93b43fcb))
+
 ## [0.4.1](https://github.com/x2od/prettier-config/compare/v0.4.0...v0.4.1) (2026-10-19)
 
 
