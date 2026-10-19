@@ -1,0 +1,2 @@
+@media (max-width: 600px){.card>h2,.card  h3{color:#333;margin:0 0 1rem}a:hover{text-decoration:underline}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));font-family:'Helvetica Neue',Arial,sans-serif}

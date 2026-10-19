@@ -1,0 +1,3 @@
+$brand: #336699;
+@mixin card($pad: 1rem) { padding: $pad; border: 1px solid darken($brand, 10%); }
+.card { @include card(2rem); &__title { color: $brand; .active & { font-weight: bold } } }

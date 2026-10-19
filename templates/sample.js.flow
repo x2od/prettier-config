@@ -1,0 +1,4 @@
+// @flow
+type User = { id: number, name: string, tags: Array<string> };
+export function greet(user: User): string { return `Hello ${user.name}` }
+export type Result<T> = { ok: true, value: T } | { ok: false, error: string };
