@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.4.1](https://github.com/x2od/prettier-config/compare/v0.4.0...v0.4.1) (2026-10-19)
+
+
+### ✨ Features
+
+* **json:** Ensure JSON always uses double quotes ([5636171](https://github.com/x2od/prettier-config/commit/56361710c50ef82ecce5f5e68f2ec646b773dad7))
+
+
+### 🔧 Miscellaneous Chores
+
+* Release 0.4.1 ([0d75b22](https://github.com/x2od/prettier-config/commit/0d75b22ba3f5f7c1caa06611aeb616c8a4766516))
+
+
+### 📦 Build System
+
+* **deps-dev:** Bump brace-expansion from 5.0.7 to 5.0.12 ([#98](https://github.com/x2od/prettier-config/issues/98)) ([9ee0825](https://github.com/x2od/prettier-config/commit/9ee08252f530165d5571bbb8b1708ad4a256d409))
+* **deps-dev:** Bump handlebars from 4.7.9 to 4.7.10 ([#100](https://github.com/x2od/prettier-config/issues/100)) ([08aed35](https://github.com/x2od/prettier-config/commit/08aed355f8b123b050a9c7f85b50ea2ffcf04900))
+* **deps:** Bump axios from 1.18.1 to 1.20.0 ([#99](https://github.com/x2od/prettier-config/issues/99)) ([8655ba6](https://github.com/x2od/prettier-config/commit/8655ba6e919318f8e35a3b96720b2b6199f25211))
+* **deps:** Bump joi from 18.2.3 to 18.3.0 ([#101](https://github.com/x2od/prettier-config/issues/101)) ([1112eec](https://github.com/x2od/prettier-config/commit/1112eecfabe5fef1a4d3ac89eb2ad7a3613bb918))
+
 ## [0.4.0](https://github.com/x2od/prettier-config/compare/v0.3.1...v0.4.0) (2026-10-17)
 
 
