@@ -1,1 +1,9 @@
-<design:component label="Sample"><design:attribute name="title" label="Title" description="Heading text"/><design:attribute name="count" label="Starting count" description="Number shown before the first click"/></design:component>
+<design:component label="Sample"
+  ><design:attribute
+    name="title"
+    label="Title"
+    description="Heading text" /><design:attribute
+    name="count"
+    label="Starting count"
+    description="Number shown before the first click"
+/></design:component>

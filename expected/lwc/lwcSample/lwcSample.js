@@ -11,6 +11,6 @@ export default class LwcSample extends LightningElement {
 
 	handleClick() {
 		this.clickCount += 1;
-this.dispatchEvent(new CustomEvent('sampleclick', { detail: { count: this.clickCount } }));
+		this.dispatchEvent(new CustomEvent('sampleclick', { detail: { count: this.clickCount } }));
 	}
 }

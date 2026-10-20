@@ -1,10 +1,25 @@
-<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global" description="Sample component with a title and a button"
-	><aura:attribute name="title" type="String" default="Hello" description="Heading text shown above the button" /><aura:attribute
+<aura:component
+	implements="flexipage:availableForAllPageTypes,force:appHostable"
+	access="global"
+	description="Sample component with a title and a button"
+	><aura:attribute
+		name="title"
+		type="String"
+		default="Hello"
+		description="Heading text shown above the button" /><aura:attribute
 		name="count"
 		type="Integer"
-		default="0" /><aura:handler name="init" value="{!this}" action="{!c.doInit}" /><aura:registerEvent name="sampleEvent" type="c:sampleEvt" />
+		default="0" /><aura:handler
+		name="init"
+		value="{!this}"
+		action="{!c.doInit}" /><aura:registerEvent
+		name="sampleEvent"
+		type="c:sampleEvt" />
 	<div class="sample-card slds-p-around_medium">
 		<h2 class="slds-text-heading_medium">{!v.title}</h2>
 		<p>Clicked {!v.count} times</p>
-		<lightning:button label="Click me" variant="brand" onclick="{!c.handleClick}" /></div
+		<lightning:button
+			label="Click me"
+			variant="brand"
+			onclick="{!c.handleClick}" /></div
 ></aura:component>

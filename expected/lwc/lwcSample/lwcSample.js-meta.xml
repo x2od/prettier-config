@@ -5,7 +5,7 @@
     <masterLabel>LWC Sample</masterLabel>
     <description>Sample component with a title and a click counter</description>
     <targets>
- <target>lightning__AppPage</target>
+        <target>lightning__AppPage</target>
         <target>lightning__RecordPage</target>
     </targets>
 </LightningComponentBundle>

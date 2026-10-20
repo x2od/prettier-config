@@ -8,8 +8,6 @@ describe('c-lwc-sample', () => {
 		}
 	});
 
-
-
 	it('shows the click count after a click', async () => {
 		const element = createElement('c-lwc-sample', { is: LwcSample });
 		document.body.appendChild(element);

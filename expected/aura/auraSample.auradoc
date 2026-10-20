@@ -1,1 +1,11 @@
-<aura:documentation><aura:description>Sample doc for the sample component. It shows a title and a button that counts clicks.</aura:description><aura:example name="basic" ref="c:sample" label="Basic"><aura:description>Example with a description long enough to test whitespace handling.</aura:description></aura:example></aura:documentation>
+<aura:documentation
+  ><aura:description
+    >Sample doc for the sample component. It shows a title and a button that
+    counts clicks.</aura:description
+  ><aura:example name="basic" ref="c:sample" label="Basic"
+    ><aura:description
+      >Example with a description long enough to test whitespace
+      handling.</aura:description
+    ></aura:example
+  ></aura:documentation
+>

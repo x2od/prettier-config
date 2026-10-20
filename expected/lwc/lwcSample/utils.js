@@ -1,3 +1,3 @@
 export function formatCount(count) {
-return `Clicked ${count} times`;
+	return `Clicked ${count} times`;
 }
