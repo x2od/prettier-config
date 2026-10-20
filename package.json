@@ -14,21 +14,26 @@
   },
   "license": "MIT",
   "main": "index.json",
-  "files": ["index.json"],
-  "keywords": ["prettier", "x2od"],
+  "files": [
+    "index.json"
+  ],
+  "keywords": [
+    "prettier",
+    "x2od"
+  ],
   "scripts": {
     "changelog:preview": "release-please release-pr --repo-url=x2od/prettier-config --target-branch=$(git branch --show-current) --dry-run --token=$(gh auth token)",
     "lint-staged": "lint-staged",
     "minor": "npm version minor",
     "patch": "npm version patch",
     "prepare": "husky",
-    "test:format": "./scripts/check-format.sh",
-    "test:format:update": "./scripts/check-format.sh --update",
-    "test:idempotence": "node scripts/check-idempotence.js",
     "prettier": "prettier --write .",
     "prettier:verify": "prettier --list-different .",
     "prune": "git checkout main && git branch --merged | grep -v '^\\*\\|main' | xargs -r git branch -d",
-    "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
+    "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate",
+    "test:format": "./scripts/check-format.sh",
+    "test:format:update": "./scripts/check-format.sh --update",
+    "test:idempotence": "node scripts/check-idempotence.js"
   },
   "peerDependencies": {
     "prettier": ">=3.1.0"
