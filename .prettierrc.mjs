@@ -9,6 +9,32 @@ const config = {
 	$schema: 'https://json.schemastore.org/prettierrc',
 	overrides: [
 		...x2odPrettierConfig.overrides,
+
+		{
+			files: '*.json*',
+			options: {
+				printWidth: 80,
+				quoteProps: 'consistent',
+				singleQuote: false,
+				useTabs: false
+			}
+		},
+		{
+			files: '*.json',
+			options: {
+				parser: 'json',
+				quoteProps: 'consistent',
+				singleQuote: false
+			}
+		},
+		{
+			files: '*.json5',
+			options: {
+				parser: 'jsonc',
+				quoteProps: 'consistent',
+				singleQuote: false
+			}
+		},
 		{
 			files: 'package.json',
 			options: {

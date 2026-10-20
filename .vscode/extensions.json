@@ -22,6 +22,7 @@
     // npm
     "matteopieroni.refresh-npm-packages",
     // Themes
-    "pkief.material-icon-theme"
+    "pkief.material-icon-theme",
+    "blueglassblock.better-json5"
   ]
 }
