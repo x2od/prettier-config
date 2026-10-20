@@ -2,13 +2,8 @@
   "description": "Custom renovate rules for @x2od",
   "extends": [
     ":ignoreModulesAndTests",
-    "group:react",
-    "replacements:all",
-    "workarounds:all",
     "docker:pinDigests",
     //":semanticCommitScope({{depName}})",
-    ":approveMajorUpdates",
-    ":separateMultipleMajorReleases",
     ":widenPeerDependencies"
   ],
   "schedule": [],
@@ -38,16 +33,6 @@
     "semanticCommitScope": "{{depName}}",
     "commitMessageTopic": "action {{depName}}",
     "commitMessageExtra": "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{prettyNewVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
-  },
-  "major": {
-    "autoApprove": true,
-    "automerge": false,
-    "addLabels": ["renovate", "major"]
-  },
-  "patch": {
-    "autoApprove": true,
-    "automerge": false,
-    "addLabels": ["renovate", "patch"]
   },
   "minor": {
     "autoApprove": true,
