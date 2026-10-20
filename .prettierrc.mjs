@@ -6,22 +6,7 @@ import x2odPrettierConfig from './index.json' with { type: 'json' };
  */
 const config = {
 	...x2odPrettierConfig,
-	$schema: 'https://json.schemastore.org/prettierrc',
-	overrides: [
-		...x2odPrettierConfig.overrides,
-		{
-			files: 'package.json',
-			options: {
-				printWidth: 100
-			}
-		},
-		{
-			files: '*.{js,mjs}',
-			options: {
-				singleQuote: true
-			}
-		}
-	]
+	overrides: [...x2odPrettierConfig.overrides]
 };
 
 export default config;

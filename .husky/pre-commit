@@ -1,3 +1,6 @@
+# Ensure all files format as expected
+npm run test:format
+
 # Keep generated docs in sync (no-op until you configure targets in the script).
 [ -f scripts/update-docs.js ] && node scripts/update-docs.js
 

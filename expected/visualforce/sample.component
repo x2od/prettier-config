@@ -1,0 +1,4 @@
+<apex:component controller="AccountController">
+	<apex:attribute name="title" type="String" description="Title" />
+	<apex:outputText value="{!title}"
+/></apex:component>

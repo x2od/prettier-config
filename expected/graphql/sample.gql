@@ -1,0 +1,9 @@
+schema {
+	query: Query
+	mutation: Mutation
+}
+
+input CreateUserInput {
+	name: String!
+	email: String!
+}

@@ -235,3 +235,16 @@ When adding overrides, prefer a single string pattern with curly-brace alternati
 `files` also accepts an array of patterns, which is the right choice when the globs can't be expressed as one alternation (e.g. `["**/pmd/*.xml", "ruleset.xml", "pmd*.xml"]`).
 
 When extending sections like `overrides` and `plugins`, be sure to spread the original config's values (`...x2odPrettierConfig.overrides` and `...x2odPrettierConfig.plugins`) to preserve them. If adding plugins, install them as local devDependencies.
+
+## Testing the Configuration
+
+The `templates/` folder holds one unformatted sample per file type. The `expected/` folder holds the reviewed Prettier output for each sample.
+
+1. Change the configuration in `index.json` or `.prettierrc.mjs`.
+2. Run `npm run test:format`. It copies `templates/` into `test/`, formats `test/` with the current configuration, and compares the result with `expected/`. Any differences are printed.
+3. If the differences are correct, run `npm run test:format:update` to replace `expected/` with the new output. Review the changes before you commit them.
+4. Run `npm run test:idempotence`. It formats each template twice and fails if any file changes on the second pass or has no parser.
+
+To add a sample, put the file in `templates/`, then run `npm run test:format` and review the output. Run `npm run test:format:update` once you accept it.
+
+`test/` is ignored by Git, so do not edit it. Make changes in `templates/` instead.

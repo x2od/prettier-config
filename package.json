@@ -30,7 +30,10 @@
     "prettier": "prettier --write .",
     "prettier:verify": "prettier --list-different .",
     "prune": "git checkout main && git branch --merged | grep -v '^\\*\\|main' | xargs -r git branch -d",
-    "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate"
+    "renovate:validate": "npm install renovate && npx renovate-config-validator && npm uninstall renovate",
+    "test:format": "./scripts/check-format.sh",
+    "test:format:update": "./scripts/check-format.sh --update",
+    "test:idempotence": "node scripts/check-idempotence.js"
   },
   "peerDependencies": {
     "prettier": ">=3.1.0"

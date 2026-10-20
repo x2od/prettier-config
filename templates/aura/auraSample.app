@@ -1,0 +1,1 @@
+<aura:application extends="force:slds" description="Sample standalone application"><aura:dependency resource="c:sampleEvt" type="EVENT"/><c:sample title="A long title value that goes past the narrow width" /></aura:application>
