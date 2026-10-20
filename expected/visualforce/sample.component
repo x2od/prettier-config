@@ -1,4 +1,10 @@
-<apex:component controller="AccountController">
-	<apex:attribute name="title" type="String" description="Title" />
-	<apex:outputText value="{!title}"
-/></apex:component>
+<apex:component>
+	<!-- Define attributes to accept data from the parent page -->
+	<apex:attribute name="titleText" type="String" required="true" description="The main text for the header" />
+	<apex:attribute name="borderColor" type="String" default="#0070d2" description="Hex color code for the border" />
+
+	<!-- Component Markup -->
+	<div style="border-left: 5px solid {!borderColor}; padding: 10px 15px; margin-bottom: 20px; background-color: #f3f2f1;">
+		<h2 style="margin: 0; font-family: sans-serif; color: #16325c">{!titleText}</h2>
+	</div>
+</apex:component>
