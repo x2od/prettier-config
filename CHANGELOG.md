@@ -1,5 +1,65 @@
 # Changelog
 
+## [0.5.0](https://github.com/x2od/prettier-config/compare/v0.4.2...v0.5.0) (2026-10-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **format:** The Prettier output for Aura and Visualforce markup changes, because markup now formats at 80 columns instead of 180 columns. The next format run rewraps every line longer than 80 columns in `.cmp`, `.app`, `.component`, `.page`, `.evt`, `.intf`, `.design`, `.auradoc`, and `.tokens` files. The `.evt`, `.intf`, `.design`, `.auradoc`, and `.tokens` files in an `aura` folder also change from `htmlWhitespaceSensitivity: "css"` to `"ignore"`. Prettier now puts each of their tags on its own line. The Aura settings now apply only to files inside an `aura` folder. A project that runs `prettier --check` in CI or in a hook fails until the project formats these files again.
+    #### Migration
+    - Run `npx prettier --write .` after the upgrade, and commit the result
+    on its own.
+    - Read the diff of the `.page`, `.component`, `.cmp`, and `.app` files
+    before you merge it, because white space between tags can change the
+    rendered page.
+    - Keep Aura bundles in an `aura` folder, as the Salesforce DX project
+    layout requires.
+
+### ✨ Features
+
+* **aura:** Apply the Aura overrides only to files in an aura folder ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **aura:** Ignore white space between tags in five Aura file types ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **config:** Narrow Aura and Visualforce markup to 80 columns ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **format:** Add a test module for the Prettier configuration ([#108](https://github.com/x2od/prettier-config/issues/108)) ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+
+
+### 🐛 Bug Fixes
+
+* **aura:** Stop rewriting Aura expressions in .cmp and .app files ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **config:** Use jsonc for JSON5 and 80 columns for package.json ([#106](https://github.com/x2od/prettier-config/issues/106)) ([ed01ccd](https://github.com/x2od/prettier-config/commit/ed01ccdcfe0b348fbbcaba4797c67ca01ed77c11))
+* **readme:** Update to include 0.5.0 breaking changes ([8b37cdc](https://github.com/x2od/prettier-config/commit/8b37cdce1ada17d864120cdf8f89583361c90c7a))
+
+
+### ✅ Tests
+
+* **format:** Add a check that a second format pass changes nothing ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **format:** Add sample templates and reviewed expected output ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **json5:** Cover JSON5 and JSONC syntax in the sample templates ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+
+
+### 🔧 Miscellaneous Chores
+
+* **husky:** Run the format check in the pre-commit hook ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **prettier:** Drop the local overrides from .prettierrc.mjs ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **renovate:** Use renovate.jsonc shared preset from x2od/.github ([4b4bddd](https://github.com/x2od/prettier-config/commit/4b4bddde5caa0f4937b34f53dd6d376df7b6f10d))
+* **vscode:** Recommend better-json5 and map json5 files to it ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+
+
+### 📝 Documentation
+
+* **readme:** Add a Testing the Configuration section ([c1537a9](https://github.com/x2od/prettier-config/commit/c1537a9e54e7ba0f83b246e31dd6d8897829c4a7))
+* **readme:** Document 0.5.0 formatting changes ([a89262d](https://github.com/x2od/prettier-config/commit/a89262df4a10a50b8b74f589a74d85365ad2d8af))
+
+
+### ⏪ Reverts
+
+* **visualforce:** Keep old VF print width, update tests ([e06b1c4](https://github.com/x2od/prettier-config/commit/e06b1c4fb7d39f8133e5add3d90739111caf3221))
+
+
+### 👷 Continuous Integration
+
+* **format:** Run the format check on index.json changes and on demand ([#109](https://github.com/x2od/prettier-config/issues/109)) ([d22c18f](https://github.com/x2od/prettier-config/commit/d22c18fc578c2e6d395843ebe8bb08281b6e7077))
+
 ## [0.4.2](https://github.com/x2od/prettier-config/compare/v0.4.1...v0.4.2) (2026-10-19)
 
 
