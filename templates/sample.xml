@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns="http://example.com/x"><Item id="1" name="first" description="a long description attribute value that might push the line past the width"/><Empty/><Text>  keep   this  spacing  </Text></Root>

@@ -1,3 +1,0 @@
-query GetUser($id: ID!, $withPosts: Boolean = false) { user(id: $id) { id name posts(first: 10) @include(if: $withPosts) { edges { node { title } } } } }
-
-type User implements Node { id: ID! name: String "The display name" posts(first: Int = 10): [Post!]! }

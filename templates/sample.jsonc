@@ -1,6 +1,0 @@
-{
-	// line comment
-	"name": "x2od", /* block comment */
-	"items": [1, 2, 3],
-	"nested": { "enabled": true, "label": "a label long enough to exceed the narrow print width setting" },
-}

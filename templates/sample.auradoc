@@ -1,1 +1,0 @@
-<aura:documentation><aura:description>Sample doc</aura:description><aura:example name="basic" ref="c:sample" label="Basic"><aura:description>Example with a description long enough to test whitespace handling.</aura:description></aura:example></aura:documentation>

@@ -1,0 +1,5 @@
+<apex:page controller="AccountController" showHeader="false" sidebar="false"
+	><apex:form
+		><apex:pageBlock title="Accounts"
+			><apex:pageBlockTable value="{!accounts}" var="a"><apex:column value="{!a.Name}" /></apex:pageBlockTable></apex:pageBlock></apex:form
+></apex:page>

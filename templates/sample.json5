@@ -1,7 +1,0 @@
-{
-  "unquoted": 'single quoted',
-  "double": "value",
-  "trailing": [1, 2, 3,],
-  "hex": 0xFF,
-  nested: {deep: {deeper: 'a long string value that exceeds the print width for json5 files'}},
-}

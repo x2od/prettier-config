@@ -1,0 +1,1 @@
+<aura:event type="APPLICATION" description="A sample event"><aura:attribute name="message" type="String" /></aura:event>

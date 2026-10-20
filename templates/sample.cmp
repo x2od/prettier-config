@@ -1,1 +1,0 @@
-<aura:component implements="force:appHostable" access="global"><aura:attribute name="title" type="String" default="Hello"/><lightning:button label="{!v.title}" onclick="{!c.handleClick}" variant="brand"/></aura:component>

@@ -1,0 +1,1 @@
+<aura:interface><aura:attribute name="recordId" type="Id" /></aura:interface>
