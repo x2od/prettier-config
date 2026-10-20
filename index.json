@@ -159,17 +159,13 @@
     {
       "files": "*.json",
       "options": {
-        "parser": "json",
-        "quoteProps": "consistent",
-        "singleQuote": false
+        "parser": "json"
       }
     },
     {
       "files": "*.json5",
       "options": {
-        "parser": "json5",
-        "quoteProps": "consistent",
-        "singleQuote": false
+        "parser": "jsonc"
       }
     },
     {
@@ -177,7 +173,7 @@
       "options": {
         "parser": "json-stringify",
         "singleQuote": false,
-        "printWidth": 180
+        "printWidth": 80
       }
     },
     {
