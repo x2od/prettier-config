@@ -52,7 +52,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - **printWidth**: 180
 - **tabWidth**: 2
 - **useTabs**: true
-- **singleQuote**: true
+- **singleQuote**: false
 - **trailingComma**: "none"
 - **bracketSpacing**: true
 - **bracketSameLine**: true
@@ -60,14 +60,16 @@ This config includes sensible defaults optimized for Salesforce development and 
 
 **File-specific overrides** are included for:
 
-- `.{cmp,component,page,app,auradoc,design,evt,intf,tokens}` — Aura bundle files and Visualforce pages/components
+- `.{cmp,component,page,app,auradoc,design,evt,intf,tokens}` — Aura bundle files and Visualforce pages/components (printWidth: 80)
   - `.{auradoc,design,evt,intf,tokens}` also use whitespace-insensitive formatting, because these files never render as a page. Components, pages and apps keep Prettier's default whitespace handling, so inline text such as `Hello <b>{!name}</b>,` never gains a visible space.
 - `.{cls,trigger}` — Apex classes and triggers (tabs; triggers use printWidth: 200)
 - `*.apex` — Anonymous Apex (tabs)
 - `*.xml` — XML, with PMD rulesets handled distinctly; Salesforce metadata (`*-meta.xml`) and manifests (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) use 4-space indentation to match Salesforce output
 - `.{yml,yaml}` — YAML files
-- `*.json` / `*.json5` — JSON files (printWidth: 80)
-- `package.json` — sorted via `prettier-plugin-pkg`
+- `*.json` — JSON files (printWidth: 80)
+- `*.json5` — JSON5 files, formatted with the `jsonc` parser (printWidth: 80)
+- `package.json` — `json-stringify` parser (printWidth: 80); fields are sorted by `prettier-plugin-pkg`
+- `*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}` — JavaScript and TypeScript use single quotes
 - `.prettierrc*` — Prettier config files (printWidth: 80)
 - `*.md` — Markdown (spaces, not tabs)
 - `.html` — HTML files: `doc*` with custom attribute grouping; LWC templates with the `lwc` parser
@@ -104,6 +106,16 @@ Prettier won't format these, or shouldn't, in a Salesforce project. Start with t
 coverage/
 node_modules/
 ```
+
+## Upgrading to 0.5.0
+
+Version 0.5.0 changes the formatting output for these files. The first `prettier --write` after upgrading reformats them:
+
+- **JSON5** (`*.json5`) uses the `jsonc` parser instead of `json5`.
+- **Markup** (`*.{cmp,component,page,app,auradoc,design,evt,intf,tokens}`) uses printWidth 80 instead of 180.
+- **package.json** uses printWidth 80 instead of 180.
+
+Follow the same steps as in [Upgrading to 0.2.0](#upgrading-to-020) to keep this reformat out of `git blame`.
 
 ## Upgrading to 0.2.0
 
@@ -248,3 +260,5 @@ The `templates/` folder holds one unformatted sample per file type. The `expecte
 To add a sample, put the file in `templates/`, then run `npm run test:format` and review the output. Run `npm run test:format:update` once you accept it.
 
 `test/` is ignored by Git, so do not edit it. Make changes in `templates/` instead.
+
+`npm run test:format` hides the `DEP0190` deprecation warning from `prettier-plugin-apex`. The plugin starts a shell with unescaped arguments. No newer plugin release fixes this yet.
