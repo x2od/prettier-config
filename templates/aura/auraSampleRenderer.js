@@ -3,9 +3,6 @@
 		this.superAfterRender();
 const el = component.getElement();
 		if (el) { el.setAttribute("data-rendered", "true"); }
-},
-
-rerender: function (component, helper) {
+},rerender: function (component, helper) {
 	this.superRerender();
-}
-})
+}})

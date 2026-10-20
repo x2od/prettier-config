@@ -3,11 +3,14 @@
 # Pass --update to replace expected/ with the current output.
 set -euo pipefail
 
+# Hide the DEP0190 warning from prettier-plugin-apex, which starts a shell with unescaped arguments.
+export NODE_OPTIONS="${NODE_OPTIONS:+$NODE_OPTIONS }--disable-warning=DEP0190"
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 "$ROOT/scripts/reset-test.sh"
-npx prettier --write test > /dev/null
+npx prettier --write test --ignore-path .prettierignore --config index.json > /dev/null
 
 if [ "${1:-}" = "--update" ]; then
   rm -rf expected

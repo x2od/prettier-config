@@ -45,7 +45,8 @@
         "attributeIgnoreCase": true,
         "htmlWhitespaceSensitivity": "css",
         "singleQuote": false,
-        "useTabs": false
+        "useTabs": false,
+        "printWidth": 80
       }
     },
     {
@@ -56,15 +57,24 @@
         "useTabs": true
       }
     },
+
     {
-      "files": "*.{auradoc,design,evt,intf,tokens}",
+      "files": "**/aura/**/*.{cmp,app}",
       "options": {
+        "parser": "html",
         "htmlWhitespaceSensitivity": "css",
+        "embeddedLanguageFormatting": "off",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "**/aura/**/*.{evt,intf,design,auradoc,tokens}",
+      "options": {
+        "htmlWhitespaceSensitivity": "ignore",
         "singleQuote": false,
         "useTabs": false
       }
     },
-
     {
       "files": "*.{cls,trigger}",
       "options": {
