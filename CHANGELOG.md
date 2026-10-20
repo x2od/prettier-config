@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.6.0](https://github.com/x2od/prettier-config/compare/v0.5.0...v0.6.0) (2026-10-20)
+
+
+### ✨ Features
+
+* **json5:** Remove json5 to jsonc parser override ([5cdbe00](https://github.com/x2od/prettier-config/commit/5cdbe00e57b3c01c44a57bc082b830e39ee25f7a))
+
+
+### 🔧 Miscellaneous Chores
+
+* **renovate:** Follow the shared x2od/.github Renovate preset ([#111](https://github.com/x2od/prettier-config/issues/111)) ([6e73063](https://github.com/x2od/prettier-config/commit/6e73063e2d245323c3ab88f971b798f92c76665f))
+
+
+### 📝 Documentation
+
+* **memory:** Point the commit conventions note to renovate.jsonc ([#113](https://github.com/x2od/prettier-config/issues/113)) ([61374ca](https://github.com/x2od/prettier-config/commit/61374ca181ded124a3d0a03e745e5fc3c43bbc32))
+
 ## [0.5.0](https://github.com/x2od/prettier-config/compare/v0.4.2...v0.5.0) (2026-10-20)
 
 
