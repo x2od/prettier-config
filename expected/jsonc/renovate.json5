@@ -23,71 +23,71 @@
   "separateMinorPatch": false,
   "pinDigests": false,
   "github-actions": {
-    "description": "All Github updates",
-    "automergeType": "pr",
-    "managerFilePatterns": [
+    description: "All Github updates",
+    automergeType: "pr",
+    managerFilePatterns: [
       "^(workflow-templates|\\.(?:github|gitea|forgejo)/workflows)/[^/]+\\.ya?ml$",
       "(^|/)action\\.ya?ml$"
     ],
-    "semanticCommitType": "ci",
-    "semanticCommitScope": "{{depName}}",
-    "commitMessageTopic": "action {{depName}}",
-    "commitMessageExtra": "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{prettyNewVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
+    semanticCommitType: "ci",
+    semanticCommitScope: "{{depName}}",
+    commitMessageTopic: "action {{depName}}",
+    commitMessageExtra: "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{prettyNewVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
   },
   "minor": {
-    "autoApprove": true,
-    "automerge": false,
-    "addLabels": ["renovate", "minor"]
+    autoApprove: true,
+    automerge: false,
+    addLabels: ["renovate", "minor"]
   },
-  "pre-commit": { "enabled": true },
-  "vulnerabilityAlerts": { "enabled": true },
-  "lockFileMaintenance": { "enabled": false },
+  "pre-commit": { enabled: true },
+  "vulnerabilityAlerts": { enabled: true },
+  "lockFileMaintenance": { enabled: false },
   "packageRules": [
     {
-      "description": "all minor/patch updates",
-      "matchCurrentVersion": ">= 1.0.0",
-      "matchUpdateTypes": ["minor", "patch"]
+      description: "all minor/patch updates",
+      matchCurrentVersion: ">= 1.0.0",
+      matchUpdateTypes: ["minor", "patch"]
     },
     {
-      "description": "All npm updates. Note commit extra message was set globally.",
-      "matchManagers": ["npm"],
-      "rangeStrategy": "bump"
+      description: "All npm updates. Note commit extra message was set globally.",
+      matchManagers: ["npm"],
+      rangeStrategy: "bump"
     },
     {
-      "description": "renovate updates require approval",
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["renovate"],
-      "dependencyDashboardApproval": true,
-      "autoApprove": false
+      description: "renovate updates require approval",
+      matchManagers: ["npm"],
+      matchPackageNames: ["renovate"],
+      dependencyDashboardApproval: true,
+      autoApprove: false
     },
     {
-      "description": "Keep eslint on v9. Do not allow v10 or later.",
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["eslint"],
-      "allowedVersions": "<10"
+      description: "Keep eslint on v9. Do not allow v10 or later.",
+      matchManagers: ["npm"],
+      matchPackageNames: ["eslint"],
+      allowedVersions: "<10"
     },
     {
-      "description": "Github minor/patch updates",
-      "matchCurrentVersion": ">=1.x",
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "digest", "pinDigest"],
-      "enabled": false
+      description: "Github minor/patch updates",
+      matchCurrentVersion: ">=1.x",
+      matchManagers: ["github-actions"],
+      matchUpdateTypes: ["minor", "patch", "digest", "pinDigest"],
+      enabled: false
     },
     {
-      "description": "Github major updates",
-      "matchCurrentVersion": ">=1.x",
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "autoApprove": true,
-      "dependencyDashboardApproval": true,
-      "commitMessageExtra": "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{prettyNewVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
+      description: "Github major updates",
+      matchCurrentVersion: ">=1.x",
+      matchManagers: ["github-actions"],
+      matchUpdateTypes: ["major"],
+      automerge: false,
+      autoApprove: true,
+      dependencyDashboardApproval: true,
+      commitMessageExtra: "from {{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{prettyNewVersion}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
-      "description": "All prerelease",
-      "matchCurrentVersion": "<1.0.0",
-      "automerge": false,
-      "autoApprove": false
+      description: "All prerelease",
+      matchCurrentVersion: "<1.0.0",
+      automerge: false,
+      autoApprove: false
     }
   ]
 }

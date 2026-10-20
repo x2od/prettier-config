@@ -168,18 +168,6 @@
       }
     },
     {
-      "files": "*.json",
-      "options": {
-        "parser": "json"
-      }
-    },
-    {
-      "files": "*.json5",
-      "options": {
-        "parser": "jsonc"
-      }
-    },
-    {
       "files": "package.json",
       "options": {
         "parser": "json-stringify",
