@@ -60,7 +60,8 @@ This config includes sensible defaults optimized for Salesforce development and 
 
 **File-specific overrides** are included for:
 
-- `.{cmp,component,page,app,auradoc,design,evt,intf,tokens}` — Aura bundle files and Visualforce pages/components (printWidth: 80)
+- `.{cmp,component,page,app,auradoc,design,evt,intf,tokens}` — Aura bundle files and Visualforce pages/components
+  - Aura bundle files under `**/aura/**` use printWidth 80. Visualforce pages and components keep printWidth 180.
   - `.{auradoc,design,evt,intf,tokens}` also use whitespace-insensitive formatting, because these files never render as a page. Components, pages and apps keep Prettier's default whitespace handling, so inline text such as `Hello <b>{!name}</b>,` never gains a visible space.
 - `.{cls,trigger}` — Apex classes and triggers (tabs; triggers use printWidth: 200)
 - `*.apex` — Anonymous Apex (tabs)
@@ -112,7 +113,7 @@ node_modules/
 Version 0.5.0 changes the formatting output for these files. The first `prettier --write` after upgrading reformats them:
 
 - **JSON5** (`*.json5`) uses the `jsonc` parser instead of `json5`.
-- **Markup** (`*.{cmp,component,page,app,auradoc,design,evt,intf,tokens}`) uses printWidth 80 instead of 180.
+- **Aura bundle markup** (`**/aura/**/*.{cmp,app,auradoc,design,evt,intf,tokens}`) uses printWidth 80 instead of 180. Visualforce pages and components keep 180.
 - **package.json** uses printWidth 80 instead of 180.
 
 Follow the same steps as in [Upgrading to 0.2.0](#upgrading-to-020) to keep this reformat out of `git blame`.
