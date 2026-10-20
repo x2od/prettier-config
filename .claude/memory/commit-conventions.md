@@ -20,7 +20,7 @@ Commit and pull-request conventions the user requires in this repo
   `build(deps):`. The user prefers the specific package name so the CHANGELOG
   says which dependency changed without opening the commit.
   Renovate already follows this: the shared preset
-  (`github>x2od/.github:renovate.json5`, extended by `.github/renovate.json`)
+  (`github>x2od/.github:renovate.jsonc`, extended by `.github/renovate.json`)
   overrides Renovate's default `deps` scope with the dependency name. Do NOT
   suggest adding `semanticCommitScope` to this repo — it is handled upstream.
 - The commit **title must start with a present-tense verb** (e.g. "add",
