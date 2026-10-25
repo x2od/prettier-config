@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm test
-        env: { NODE_ENV: 'test', CI: true }
+        env: { NODE_ENV: "test", CI: true }

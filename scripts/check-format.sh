@@ -24,5 +24,5 @@ if [ ! -d expected ]; then
   exit 1
 fi
 
-diff -r expected test
+diff -r -x .DS_Store expected test
 echo "check-format: test/ matches expected/"
