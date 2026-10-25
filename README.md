@@ -66,7 +66,7 @@ This config includes sensible defaults optimized for Salesforce development and 
 - `.{cls,trigger}` — Apex classes and triggers (tabs; triggers use printWidth: 200)
 - `*.apex` — Anonymous Apex (tabs)
 - `*.xml` — XML, with PMD rulesets handled distinctly; Salesforce metadata (`*-meta.xml`) and manifests (`manifest/*.xml`, `package.xml`, `destructiveChanges*.xml`) use 4-space indentation to match Salesforce output
-- `.{yml,yaml}` — YAML files
+- `.{yml,yaml}` — YAML files. The override states the Prettier defaults explicitly, so YAML formatting does not change if the global options change: `bracketSpacing: true`, `endOfLine: "lf"`, `printWidth: 80`, `proseWrap: "preserve"`, `quoteProps: "as-needed"`, `semi: true`, `singleQuote: false`, `tabWidth: 2`, `useTabs: false`
 - `*.json` — JSON files (printWidth: 80)
 - `*.json5` — JSON5 files, formatted with the `jsonc` parser (printWidth: 80)
 - `package.json` — `json-stringify` parser (printWidth: 80); fields are sorted by `prettier-plugin-pkg`
