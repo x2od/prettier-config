@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.6.1](https://github.com/x2od/prettier-config/compare/v0.6.0...v0.6.1) (2026-10-25)
+
+
+### 🐛 Bug Fixes
+
+* **test:** Ignore .DS_Store files in the format check ([93c6a6d](https://github.com/x2od/prettier-config/commit/93c6a6d194d3ba86896c8d8b87d2bfb2f0f40612))
+* **yaml:** Change YAML styling to Prettier defaults ([#116](https://github.com/x2od/prettier-config/issues/116)) ([93c6a6d](https://github.com/x2od/prettier-config/commit/93c6a6d194d3ba86896c8d8b87d2bfb2f0f40612))
+
+
+### 🎨 Styles
+
+* **workflows:** Format workflow YAML with new Prettier config ([93c6a6d](https://github.com/x2od/prettier-config/commit/93c6a6d194d3ba86896c8d8b87d2bfb2f0f40612))
+
+
+### 📦 Build System
+
+* **deps:** Bump follow-redirects from 1.16.0 to 1.16.1 ([#114](https://github.com/x2od/prettier-config/issues/114)) ([4af7c7b](https://github.com/x2od/prettier-config/commit/4af7c7baf01409d0196612de2dea6ec78769b38d))
+
 ## [0.6.0](https://github.com/x2od/prettier-config/compare/v0.5.0...v0.6.0) (2026-10-20)
 
 
