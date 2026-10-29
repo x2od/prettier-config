@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.0](https://github.com/x2od/prettier-config/compare/v0.6.1...v0.7.0) (2026-10-29)
+
+
+### ✨ Features
+
+* **tabs:** Default to tabs for accessibility ([#117](https://github.com/x2od/prettier-config/issues/117)) ([141acb1](https://github.com/x2od/prettier-config/commit/141acb139e4890468616d23442302c6a4029d830))
+
+
+### 📦 Build System
+
+* Change recommended extensions ([af4d85f](https://github.com/x2od/prettier-config/commit/af4d85f8e7387be6772762459ef41cdedd0b8392))
+
 ## [0.6.1](https://github.com/x2od/prettier-config/compare/v0.6.0...v0.6.1) (2026-10-25)
 
 
