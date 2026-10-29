@@ -45,7 +45,7 @@
         "attributeIgnoreCase": true,
         "htmlWhitespaceSensitivity": "css",
         "singleQuote": false,
-        "useTabs": false
+        "useTabs": true
       }
     },
     {
@@ -64,6 +64,7 @@
         "htmlWhitespaceSensitivity": "css",
         "embeddedLanguageFormatting": "off",
         "singleQuote": false,
+        "useTabs": true,
         "printWidth": 80
       }
     },
@@ -147,7 +148,8 @@
       "files": [".prettier*", "*prettier*js"],
       "options": {
         "printWidth": 80,
-        "singleQuote": false
+        "singleQuote": false,
+        "useTabs": false
       }
     },
     {
@@ -178,6 +180,7 @@
       "options": {
         "parser": "json-stringify",
         "singleQuote": false,
+        "useTabs": false,
         "printWidth": 80
       }
     },
@@ -198,13 +201,15 @@
       "options": {
         "parser": "lwc",
         "printWidth": 120,
-        "singleQuote": false
+        "singleQuote": false,
+        "useTabs": true
       }
     },
     {
       "files": "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
       "options": {
-        "singleQuote": true
+        "singleQuote": true,
+        "useTabs": true
       }
     },
     {
