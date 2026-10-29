@@ -12,8 +12,8 @@
     // Formatting
     "esbenp.prettier-vscode",
     // Alignment
-    "aaron-bond.better-comments",
     "cpmcgrath.codealignment-vscode",
+    "edwinhuish.better-comments-next",
     "sirtori.indenticator",
     "chouzz.vscode-better-align",
     "oderwat.indent-rainbow",
