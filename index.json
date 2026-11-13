@@ -185,6 +185,12 @@
       }
     },
     {
+      "files": "release*.json",
+      "options": {
+        "printWidth": 140
+      }
+    },
+    {
       "files": "doc*/**/*.html",
       "options": {
         "parser": "html",
