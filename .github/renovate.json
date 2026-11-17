@@ -34,7 +34,9 @@
     "automerge": false,
     "addLabels": ["renovate", "patch"]
   },
-  "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": {
+    "autoclose": true
+  },
   "lockFileMaintenance": {
     "enabled": false
   },
