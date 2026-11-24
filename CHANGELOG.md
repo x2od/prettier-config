@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.7.1](https://github.com/x2od/prettier-config/compare/v0.7.0...v0.7.1) (2026-11-24)
+
+
+### 🔧 Miscellaneous Chores
+
+* **config:** Migrate Renovate config ([#126](https://github.com/x2od/prettier-config/issues/126)) ([2881bdd](https://github.com/x2od/prettier-config/commit/2881bdd0ae7964ac2d7c6b37b043a44ba6aa19d7))
+
+
+### 📦 Build System
+
+* **deps:** Bump follow-redirects from 1.16.1 to 1.16.2 ([#119](https://github.com/x2od/prettier-config/issues/119)) ([8f001d8](https://github.com/x2od/prettier-config/commit/8f001d837a0f48932b31f5648c1eac66fd27a3cd))
+* **deps:** Bump joi from 18.3.0 to 18.3.2 ([#123](https://github.com/x2od/prettier-config/issues/123)) ([fadb500](https://github.com/x2od/prettier-config/commit/fadb500d36fe44181ba821f2e52b872362c61422))
+* **prettier:** Update devDependency prettier from 3.10.0 to 3.10.1 ([#124](https://github.com/x2od/prettier-config/issues/124)) ([2e8be26](https://github.com/x2od/prettier-config/commit/2e8be260b059c669e09724aa1eb7307325e3fac1))
+* **prettier:** Update devDependency prettier from 3.9.10 to 3.10.0 ([#121](https://github.com/x2od/prettier-config/issues/121)) ([740ddf7](https://github.com/x2od/prettier-config/commit/740ddf71a12994aa1eb0d21247c524894af1492c))
+
 ## [0.7.0](https://github.com/x2od/prettier-config/compare/v0.6.1...v0.7.0) (2026-10-29)
 
 
